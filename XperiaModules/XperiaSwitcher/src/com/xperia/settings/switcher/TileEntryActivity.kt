@@ -25,12 +25,20 @@ import android.util.Log
 
 public class TileEntryActivity: Activity() {
     private val TAG: String = "TileEntryActivity"
+    private val REFRESH_TILE: String = "com.xperia.settings.switcher.RefreshRateTileService";
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val sourceClass: ComponentName? =
             intent?.getParcelableExtra(Intent.EXTRA_COMPONENT_NAME)
         when (sourceClass?.className) {
+            REFRESH_TILE -> {
+                val intent: Intent = Intent()
+                intent.setComponent(
+                    ComponentName("com.android.settings",
+                        "com.android.settings.RefreshRateSettingsActivity"));
+                openActivitySafely(intent);
+            }
             else -> {
                 finish()
             }
