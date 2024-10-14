@@ -22,7 +22,7 @@ err_t fpc_event_create(fpc_event_t *event, int event_fd) {
 
     event->event_fd = event_fd;
 
-    fd = open("/dev/fingerprint", O_RDWR);
+    fd = open("/dev/esfp0", O_RDWR);
     if (fd < 0) {
         ALOGE("Error opening FPC device");
         return -1;

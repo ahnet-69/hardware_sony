@@ -22,7 +22,7 @@ BiometricsFingerprint::BiometricsFingerprint(EgisFpDevice &&dev) : mDev(std::mov
 
     mMasterKey = keymaster.GetKey();
 
-    rc = mTrustlet.SetDataPath("/data/system/users/0/fpdata");
+    rc = mTrustlet.SetDataPath("/data/vendor_de/0/fpdata");
     LOG_ALWAYS_FATAL_IF(rc, "SetDataPath failed with rc = %d", rc);
 
     rc = mTrustlet.SetMasterKey(mMasterKey);
