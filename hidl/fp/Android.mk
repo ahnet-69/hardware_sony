@@ -50,7 +50,7 @@ endif
 # Firmware custom location
 ifeq ($(filter-out kumano seine edo sagami nagara yodo,$(SOMC_PLATFORM)),)
 LOCAL_CFLAGS += \
-    -DEGIS_QSEE_APP_PATH=\"/odm/firmware\"
+    -DEGIS_QSEE_APP_PATH=\"/vendor/firmware\"
 endif
 
 # Firmware name and atributes
