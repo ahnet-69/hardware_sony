@@ -25,7 +25,7 @@ enum class FpHwId {
 };
 
 class EgisFpDevice {
-    static constexpr auto DEV_PATH = "/dev/esfp0";
+    static constexpr auto DEV_PATH = "/dev/fingerprint";
 
     int mFd = -1;
 
