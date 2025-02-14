@@ -23,13 +23,23 @@
     <string name="audio_menu_title">Setări Audio</string>
     <string name="audio_menu_header">Calitatea Sunetului</string>
     <string name="audio_setting_summary">Creșteți-vă calitatea sunetului cu Dolby Sound EQ pentru o experiență de redare audio remarcabilă și captivantă</string>
+
+    <string name="dsee_title">DSEE Ultimate</string>
+    <string name="dsee_summary">Îmbunătățește muzica comprimată cu precizie folosind tehnologia AI</string>
+    <string name="windnr_title">Filtru inteligent de vânt</string>
+    <string name="windnr_summary">Elimină zgomotul vântului la microfon în timpul înregistrării.\nFolosind tehnologia de separare a sunetului, puteți elimina zgomotul fără pierderi de calitate (Doar cu microfonul intern)</string>
+
     <string name="dolby_title">Dolby Sound</string>
     <string name="dolby_summary">Ajustați setările Dolby pentru a experienţă un sunet captivant, multidimensional, care vă va învăluie, dând viață filmelor, muzicii și jocurilor</string>
+
     <string name="dtsx_title">DTS:X Ultra</string>
     <string name="dtsx_summary">DTS:X Ultra îmbunătățește calitatea sunetului cu efecte spațiale tridimensionale și un egalizator reglabil de utilizator, permițând un mediu de divertisment mai captivant</string>
+
     <string name="threesixtyupmix_title">360 Upmix</string>
     <string name="threesixtyupmix_summary">Cu tehnologia 360 Reality Audio Upmix (360 Upmix) al lui Sony, vă puteți bucura de sunet spațial și captivant cu surse stereo</string>
+
     <string name="effectpriority_title">Prioritatea Efectelor</string>
     <string name="effectpriority_summary">Aplicația 360 Upmix întotdeauna va avea prioritate față de celelalte efecte pe care le-ați activat (fie oricare dintre celelalte setări de pe acest ecran cu 360 Upmix sau doar 360 Upmix în sine) pentru sunetul media al aplicațiilor.</string>
+
     <string name="audio_menu_footer">În timpul redării conținutului audio cu îmbunătățiri de sunet, informațiile conținutului vor avea prioritate față de setările de pe acest ecran. Conținutul de înaltă rezoluție poate fi redat și atunci când îmbunătățirile de sunet sunt dezactivate.\n\n\n\nDespre Audio Spatial\nPentru a activa funcția 360 Reality Audio, activați Sunet Spațial.\nToate setările de pe acest ecran suportă Audio Spatial.</string>
 </resources>

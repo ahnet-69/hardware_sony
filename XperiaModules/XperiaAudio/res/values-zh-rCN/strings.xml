@@ -23,13 +23,23 @@
     <string name="audio_menu_title">音频设置</string>
     <string name="audio_menu_header">音质</string>
     <string name="audio_setting_summary">通过 Dolby Sound EQ 提升音质，带来非凡的沉浸式音频播放体验</string>
+
+    <string name="dsee_title">DSEE Ultimate</string>
+    <string name="dsee_summary">使用AI技术精准提升压缩音乐音质</string>
+    <string name="windnr_title">智能风噪过滤</string>
+    <string name="windnr_summary">录制时消除麦克风风噪\n采用声音分离技术，可在无音质损失下降噪（仅限内置麦克风）</string>
+
     <string name="dolby_title">Dolby Sound</string>
     <string name="dolby_summary">调整杜比音效 (Dolby Sound) 设置，体验身临其境的多维声音，让电影、音乐和游戏栩栩如生</string>
+
     <string name="dtsx_title">DTS:X Ultra</string>
     <string name="dtsx_summary">DTS:X Ultra 通过三维空间效果和用户可调节的均衡器提高音频质量，为用户提供更具吸引力的娱乐环境</string>
+
     <string name="threesixtyupmix_title">360上混</string>
     <string name="threesixtyupmix_summary">借助索尼的 360度环绕音频升频 (360上混) 技术，您可以通过常规立体声源享受空间感和身临其境的声音\n查看 360度环绕音频 了解详细信息。</string>
+
     <string name="effectpriority_title">音效优先级</string>
     <string name="effectpriority_summary">360 上混 应用程序将始终优先于您打开的其他效果（无论是屏幕上的其他任何设置与360 上混，还是仅使用360 上混本身）来处理应用程序的媒体声音。</string>
+
     <string name="audio_menu_footer">在播放具有声音增强功能的音频内容时，内容的信息将优先于此屏幕上的设置。当关闭声音增强时，也可以正确播放高分辨率内容。\n\n\n\n关于空间音频\n要启用 360度环绕音频 功能，请打开空间音效。\n此屏幕上的所有设置都支持空间音频。</string>
 </resources>

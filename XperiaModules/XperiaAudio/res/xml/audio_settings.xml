@@ -43,6 +43,20 @@
                 android:targetClass="jp.co.sony.threesixtyra.settings.settingsmenu.SettingsMenuActivity" />
         </Preference>
 
+        <!-- DSEE actually doesnt work at the moment. Hide it to stop misguiding users
+       <SwitchPreferenceCompat
+           android:title="@string/dsee_title"
+           android:key="audio_dsee"
+           android:summary="@string/dsee_summary"
+           android:iconSpaceReserved="false"/>
+        -->
+
+       <SwitchPreferenceCompat
+           android:title="@string/windnr_title"
+           android:key="audio_windnr"
+           android:summary="@string/windnr_summary"
+           android:iconSpaceReserved="false"/>
+
         <Preference
             android:key="audio_effectpriority"
             android:title="@string/effectpriority_title"
