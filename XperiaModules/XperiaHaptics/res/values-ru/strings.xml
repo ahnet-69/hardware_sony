@@ -26,4 +26,8 @@
     <string name="mediavib_level_title">Уровень</string>
     <string name="mediavib_latency_title">Задержка вибрации</string>
     <string name="mediavib_description">Вибрация в такт музыке</string>
+
+    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_tile_enable">Уровень: %1$d</string>
+    <string name="mediavib_tile_disable">Выкл</string>
 </resources>

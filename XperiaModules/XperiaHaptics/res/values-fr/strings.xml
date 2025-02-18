@@ -26,4 +26,8 @@
     <string name="mediavib_level_title">Niveau</string>
     <string name="mediavib_latency_title">Latence de vibration</string>
     <string name="mediavib_description">Vibre avec la musique</string>
+
+    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_tile_enable">Niveau : %1$d</string>
+    <string name="mediavib_tile_disable">Désactivé</string>
 </resources>

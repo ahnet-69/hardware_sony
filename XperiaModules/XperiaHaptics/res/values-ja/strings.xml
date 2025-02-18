@@ -26,4 +26,8 @@
     <string name="mediavib_level_title">レベル</string>
     <string name="mediavib_latency_title">振動レイテンシ</string>
     <string name="mediavib_description">音楽に連動した振動</string>
+
+    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_tile_enable">レベル: %1$d</string>
+    <string name="mediavib_tile_disable">オフ</string>
 </resources>

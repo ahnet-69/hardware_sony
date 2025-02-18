@@ -26,4 +26,8 @@
     <string name="mediavib_level_title">레벨</string>
     <string name="mediavib_latency_title">진동 지연 시간</string>
     <string name="mediavib_description">음악에 맞춰 진동</string>
+
+    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_tile_enable">레벨: %1$d</string>
+    <string name="mediavib_tile_disable">꺼짐</string>
 </resources>

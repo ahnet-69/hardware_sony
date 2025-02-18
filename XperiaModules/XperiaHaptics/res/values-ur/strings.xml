@@ -26,4 +26,8 @@
     <string name="mediavib_level_title">سطح</string>
     <string name="mediavib_latency_title">کمپن تاخیر</string>
     <string name="mediavib_description">موسیقی کے ساتھ کمپن</string>
+
+    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_tile_enable">سطح: %1$d</string>
+    <string name="mediavib_tile_disable">بند</string>
 </resources>

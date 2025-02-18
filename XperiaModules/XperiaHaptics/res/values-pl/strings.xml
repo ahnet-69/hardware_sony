@@ -26,4 +26,8 @@
     <string name="mediavib_level_title">Poziom</string>
     <string name="mediavib_latency_title">Opóźnienie wibracji</string>
     <string name="mediavib_description">Wibracje w rytm muzyki</string>
+
+    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_tile_enable">Poziom: %1$d</string>
+    <string name="mediavib_tile_disable">Wyłączony</string>
 </resources>

@@ -26,4 +26,8 @@
     <string name="mediavib_level_title">Niveau</string>
     <string name="mediavib_latency_title">Trillingsvertraging</string>
     <string name="mediavib_description">Trillen met muziek</string>
+
+    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_tile_enable">Niveau: %1$d</string>
+    <string name="mediavib_tile_disable">Uit</string>
 </resources>

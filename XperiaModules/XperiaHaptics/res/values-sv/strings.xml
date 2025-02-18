@@ -26,4 +26,8 @@
     <string name="mediavib_level_title">Nivå</string>
     <string name="mediavib_latency_title">Vibrationsfördröjning</string>
     <string name="mediavib_description">Vibrera med musik</string>
+
+    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_tile_enable">Nivå: %1$d</string>
+    <string name="mediavib_tile_disable">Av</string>
 </resources>

@@ -26,4 +26,8 @@
     <string name="mediavib_level_title">Szint</string>
     <string name="mediavib_latency_title">Rezgés késleltetés</string>
     <string name="mediavib_description">Rezgés a zenével</string>
+
+    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_tile_enable">Szint: %1$d</string>
+    <string name="mediavib_tile_disable">Ki</string>
 </resources>

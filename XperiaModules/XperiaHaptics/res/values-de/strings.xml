@@ -26,4 +26,8 @@
     <string name="mediavib_level_title">Stufe</string>
     <string name="mediavib_latency_title">Vibrationslatenz</string>
     <string name="mediavib_description">Vibriert zur Musik</string>
+
+    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_tile_enable">Stufe: %1$d</string>
+    <string name="mediavib_tile_disable">Aus</string>
 </resources>

@@ -26,4 +26,8 @@
     <string name="mediavib_level_title">级别</string>
     <string name="mediavib_latency_title">振动延迟</string>
     <string name="mediavib_description">随音乐振动</string>
+
+    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_tile_enable">级别: %1$d</string>
+    <string name="mediavib_tile_disable">关闭</string>
 </resources>

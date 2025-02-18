@@ -26,4 +26,8 @@
     <string name="mediavib_level_title">ระดับ</string>
     <string name="mediavib_latency_title">ความหน่วงเวลาการสั่น</string>
     <string name="mediavib_description">สั่นตามเพลง</string>
+
+    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_tile_enable">ระดับ: %1$d</string> 
+    <string name="mediavib_tile_disable">ปิด</string>
 </resources>
