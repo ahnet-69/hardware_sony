@@ -3,7 +3,7 @@ android_app {
     defaults: ["SettingsLibDefaults"],
 
     srcs: [
-        "src/**/*.java",
+        "src/**/*.kt",
     ],
     resource_dirs: ["res"],
 

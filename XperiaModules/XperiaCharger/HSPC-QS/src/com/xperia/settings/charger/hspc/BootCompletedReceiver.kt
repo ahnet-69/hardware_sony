@@ -15,21 +15,21 @@
  * limitations under the License.
  */
 
-package com.xperia.settings.charger.hspc;
+package com.xperia.settings.charger.hspc
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.util.Log;
-import com.xperia.settings.charger.hspc.HSPCQSTileService;
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.util.Log
 
-public class BootCompletedReceiver extends BroadcastReceiver {
+class BootCompletedReceiver : BroadcastReceiver() {
 
-    private static final String TAG = "XperiaCharger-HSPC";
+    companion object {
+        private const val TAG = "XperiaCharger-HSPC"
+    }
 
-    @Override
-    public void onReceive(Context context, Intent intent) {
-        Log.i(TAG, "Received intent: " + intent.getAction());
-        HSPCQSTileService.onBoot(context);
+    override fun onReceive(context: Context, intent: Intent) {
+        Log.i(TAG, "Received intent: ${intent.action}")
+        HSPCQSTileService.onBoot(context)
     }
 }
