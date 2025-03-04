@@ -35,11 +35,5 @@
     <string name="dtsx_title">DTS:X Ultra</string>
     <string name="dtsx_summary">DTS:X Ultra melhora a qualidade do áudio com efeitos espaciais tridimensionais e um equalizador ajustável pelo usuário, permitindo um ambiente de entretenimento mais envolvente</string>
 
-    <string name="threesixtyupmix_title">360 Upmix</string>
-    <string name="threesixtyupmix_summary">Com a exclusiva tecnologia 360 Realidade Áudio Upmix da Sony, pode desfrutar de som espacial e envolvente a partir de fontes de som estéreo normais</string>
-
-    <string name="effectpriority_title">Prioridade de Efeitos</string>
-    <string name="effectpriority_summary">O Aplicativo 360 Upmix sempre terá prioridade sobre os outros efeitos que você ativou (qualquer uma das outras configurações nesta tela com 360 Upmix ou apenas 360 Upmix por si só) para o som de mídia dos aplicativos.</string>
-
-    <string name="audio_menu_footer">Ao reproduzir conteúdo de áudio com melhorias de som, as informações do conteúdo terão precedência sobre as configurações nesta tela. O conteúdo de alta resolução também pode ser reproduzido corretamente quando os aprimoramentos de som estão desativados.\n\n\n\nSobre o Áudio Espacial\nPara ativar o recurso 360 Realidade Áudio, ative o Som Espacial.\nTodas as configurações nesta tela são compatíveis com o Áudio Espacial.</string>
+    <string name="audio_menu_footer">Ao reproduzir conteúdo de áudio com melhorias de som, as informações do conteúdo terão precedência sobre as configurações nesta tela. O conteúdo de alta resolução também pode ser reproduzido corretamente quando os aprimoramentos de som estão desativados.</string>
 </resources>
