@@ -37,7 +37,6 @@
 /(vendor|odm|vendor/odm)/bin/hw/vendor\.somc\.hardware\.aidlmiscta-service\.somc               u:object_r:vendor_hal_miscta_default_exec:s0
 /(vendor|odm|vendor/odm)/bin/hw/vendor\.somc\.hardware\.camera\.provider@1\.0-service          u:object_r:hal_camera_default_exec:s0
 /(vendor|odm|vendor/odm)/bin/hw/vendor\.somc\.hardware\.miscta@1\.0-service                    u:object_r:vendor_hal_miscta_default_exec:s0
-/vendor/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock                              u:object_r:hal_power_stats_default_exec:s0
 
 # Devices
 /dev/block/platform/soc/1d84000\.ufshc/by-name/appslog     u:object_r:appslog_block_device:s0
