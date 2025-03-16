@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!--
+  ~ Copyright (C) 2024 XperiaLabs Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- App Name -->
+    <string name="app_name" translatable="true">엑스페리아 충전기</string>
+
+    <!-- Battery Care -->
+    <string name="charger_settings_title">배터리 관리</string>
+    <string name="charger_settings_summary">최대 충전 비율을 조정하고 기타 충전 설정을 미세 조정하여 배터리 수명을 최적화합니다</string>
+    <string name="charger_bc_enable">배터리 관리 사용</string>
+    <string name="charger_hs_enable">H.S. 전력 제어</string>
+    <string name="charger_hs_summary">H.S. 전력 제어를 끄면 배터리 충전 대신 전화 시스템에 직접 전력이 공급됩니다.\n이는 열 스트레스를 줄여 게임 성능을 유지하고 배터리 수명을 더 오래 유지하는 데 도움이 됩니다.</string>
+    <string name="charger_bc_limit">충전 제한</string>
+    <string name="charing_control_default_value">100%까지 충전</string>
+    <string name="charger_settings_footer">배터리 관리가 활성화되어 있으면 다음 조건이 충족될 때만 기기가 충전을 시작합니다.\n 1. "H.S. 전력 제어"를 켜서 충전을 활성화했습니다.\n 2. 기기의 배터리 수준이 설정한 충전 제한보다 낮습니다.\n\n\n특정 비율에 도달하면 배터리 수명을 연장하기 위해 충전이 중단됩니다.\n80%로 제한을 설정하면 더 나은 결과를 얻을 수 있습니다.</string>
+
+    <!-- H.S (Heat Suppression) Power Control QS Tile -->
+    <string name="charger_hs_tile">H.S. 전력 제어</string>
+    <string name="charger_hs_toast">배터리 케어가 꺼져 있습니다</string>
+
+</resources>

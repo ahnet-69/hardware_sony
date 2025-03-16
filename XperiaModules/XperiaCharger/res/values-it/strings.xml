@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!--
+  ~ Copyright (C) 2024 XperiaLabs Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- App Name -->
+    <string name="app_name" translatable="true">Caricabatterie Xperia</string>
+
+    <!-- Battery Care -->
+    <string name="charger_settings_title">Cura Della Batteria</string>
+    <string name="charger_settings_summary">Ottimizza la longevità della batteria regolando la percentuale massima di carica e perfezionando altre impostazioni di carica</string>
+    <string name="charger_bc_enable">Utilizza Cura Della Batteria</string>
+    <string name="charger_hs_enable">Controllo Alimentazione H.S.</string>
+    <string name="charger_hs_summary">Disattivando Controllo alimentazione H.S., i sistemi del telefono saranno alimentati direttamente anziché caricare la batteria.\nCiò riduce lo stress termico, contribuendo a mantenere le prestazioni di gioco e a mantenere la batteria in buono stato più a lungo.</string>
+    <string name="charger_bc_limit">Limite di Carica</string>
+    <string name="charing_control_default_value">Carica al 100%</string>
+    <string name="charger_settings_footer">Se Cura Della Batteria è abilitato, il dispositivo inizierà a caricarsi solo quando saranno soddisfatti i seguenti requisiti:\n 1. Hai abilitato la ricarica attivando "Controllo alimentazione H.S.".\n 2. Il livello della batteria del tuo dispositivo è inferiore al limite di carica che hai impostato.\n\n\nLa ricarica si interrompe quando viene raggiunta una determinata percentuale per aumentare la durata della batteria.\nImpostare tale limite all\'80% produce risultati ancora migliori.</string>
+
+    <!-- H.S (Heat Suppression) Power Control QS Tile -->
+    <string name="charger_hs_tile">Controllo Alimentazione H.S.</string>
+    <string name="charger_hs_toast">La cura della batteria è disattivata</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!--
+  ~ Copyright (C) 2024 XperiaLabs Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- App Name -->
+    <string name="app_name" translatable="true">Xperia 充电器</string>
+
+    <!-- Battery Care -->
+    <string name="charger_settings_title">电池护理</string>
+    <string name="charger_settings_summary">通过调整最大充电百分比和微调其他充电设置来优化电池寿命</string>
+    <string name="charger_bc_enable">使用电池护理</string>
+    <string name="charger_hs_enable">H.S. 电源控制</string>
+    <string name="charger_hs_summary">关闭 H.S. 电源控制将使手机系统直接获取电源，而不是从电池充电。\n这将减少热应力，有助于保持游戏性能并延长电池寿命。</string>
+    <string name="charger_bc_limit">充电限制</string>
+    <string name="charing_control_default_value">充电至100%</string>
+    <string name="charger_settings_footer">如果电池护理已启用，设备将仅在满足以下条件时开始充电：\n 1. 您已通过切换“H.S.电源控制”来启用充电。\n 2. 设备电池电量低于您设定的充电限制。\n\n\n充电会在达到特定百分比时停止，以延长电池寿命。\n将此限制设置为80%可以获得更好的结果。</string>
+
+    <!-- H.S (Heat Suppression) Power Control QS Tile -->
+    <string name="charger_hs_tile">H.S. 电源控制</string>
+    <string name="charger_hs_toast">电池保养已关闭</string>
+</resources>

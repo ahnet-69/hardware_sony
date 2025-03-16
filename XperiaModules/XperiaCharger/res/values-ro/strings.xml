@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!--
+  ~ Copyright (C) 2024 XperiaLabs Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- App Name -->
+    <string name="app_name" translatable="true">Încărcător Xperia</string>
+
+    <!-- Battery Care -->
+    <string name="charger_settings_title">Îngrijire baterie</string>
+    <string name="charger_settings_summary">Optimizați longevitatea bateriei ajustând procentajul maxim de încărcare și reglând fin alte setări de încărcare</string>
+    <string name="charger_bc_enable">Utilizează Îngrijire baterie</string>
+    <string name="charger_hs_enable">Controlul Puterii H.S.</string>
+    <string name="charger_hs_summary">Dezactivarea Controlului Puterii H.S. va face ca sistemele telefonului să primească energie direct, în loc să se încarce bateria.\nAcest lucru reduce stresul termic, ajutând la menținerea performanței jocurilor și la prelungirea duratei de viață a bateriei.</string>
+    <string name="charger_bc_limit">Limit încărcare</string>
+    <string name="charing_control_default_value">Încarcă până la 100%</string>
+    <string name="charger_settings_footer">Dacă Îngrijirea bateriei este activată, dispozitivul va începe să se încarce doar atunci când sunt îndeplinite următoarele condiții:\n 1. Ai activat încărcarea prin comutarea pe "Controlul Puterii H.S.".\n 2. Nivelul bateriei dispozitivului este mai mic decât limita de încărcare pe care ați stabilit-o.\n\n\nÎncărcarea se oprește când se atinge un procent specific pentru a prelungi durata de viață a bateriei.\nSetarea acestei limite la 80% oferă rezultate și mai bune.</string>
+
+    <!-- H.S (Heat Suppression) Power Control QS Tile -->
+    <string name="charger_hs_tile">Controlul Puterii H.S.</string>
+    <string name="charger_hs_toast">Îngrijirea bateriei este dezactivată</string>
+</resources>

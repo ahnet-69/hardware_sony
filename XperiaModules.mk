@@ -37,8 +37,7 @@ endif
 ifeq ($(TARGET_SUPPORTS_BATTERY_CARE),true)
         BOARD_VENDOR_SEPOLICY_DIRS += hardware/sony/XperiaModules/XperiaCharger/sepolicy/vendor
 
-	PRODUCT_PACKAGES += XperiaCharger \
-                            XperiaCharger-HSPC
+	PRODUCT_PACKAGES += XperiaCharger
 endif
 
 # Display Settings

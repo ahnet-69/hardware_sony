@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!--
+  ~ Copyright (C) 2023 XperiaLabs Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- App Name -->
+    <string name="app_name" translatable="true">Xperia Laddare</string>
+
+    <!-- Battery Care -->
+    <string name="charger_settings_title">Batteriunderhåll</string>
+    <string name="charger_settings_summary">Optimera batteriets livslängd genom att justera den maximala laddningsprocenten och finjustera andra laddningsinställningar</string>
+    <string name="charger_bc_enable">Använd Batteriunderhåll</string>
+    <string name="charger_hs_enable">H.S. Strömstyrningskontroll</string>
+    <string name="charger_hs_summary">Att stänga av H.S. Strömstyrningskontroll innebär att telefonens system får ström direkt istället för att ladda batteriet.\nDetta minskar termisk stress, vilket hjälper till att bibehålla spelprestanda och hålla batteriet hälsosamt längre.</string>
+    <string name="charger_bc_limit">Laddningsgräns</string>
+    <string name="charing_control_default_value">Ladda till 100 %</string>
+    <string name="charger_settings_footer">Om Batteriunderhåll är aktiverat, börjar enheten ladda endast när följande krav är uppfyllda:\n 1. Du har aktiverat laddning genom att slå på "H.S. Strömstyrningskontroll".\n 2. Enhetens batterinivå är lägre än den laddningsgräns du har angett.\n\n\nLaddningen stoppas när en viss procentandel har nåtts för att förlänga batteriets livslängd.\nAtt ställa in gränsen till 80% ger ännu bättre resultat.</string>
+
+    <!-- H.S (Heat Suppression) Power Control QS Tile -->
+    <string name="charger_hs_tile">H.S. Strömstyrningskontroll</string>
+    <string name="charger_hs_toast">Batterivård är avstängt</string>
+</resources>

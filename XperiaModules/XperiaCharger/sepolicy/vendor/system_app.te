@@ -1,6 +1,3 @@
-# Allow SmartCharger to access SEMC charger HAL
-allow system_app vendor_hal_somc_charger_hwservice:hwservice_manager find;
-binder_call(system_app, vendor_hal_somc_charger_default)
-
-allow system_app vendor_sysfs_battery_supply:file r_file_perms;
+# Allow XperiaCharger to r/w battery supply
+allow system_app vendor_sysfs_battery_supply:file rw_file_perms;
 allow system_app vendor_sysfs_battery_supply:dir search;

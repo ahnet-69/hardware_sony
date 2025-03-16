@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2024 XperiaLabs Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- App Name -->
+    <string name="app_name" translatable="true">Xperia Ladegerät</string>
+
+    <!-- Battery Care -->
+    <string name="charger_settings_title">Akku-Pflege</string>
+    <string name="charger_settings_summary">Optimieren Sie die Akkulanglebigkeit, indem Sie den maximalen Ladeprozentsatz anpassen und andere Ladeeinstellungen feinabstimmen</string>
+    <string name="charger_bc_enable">Akku-Pflege Verwenden</string>
+    <string name="charger_hs_enable">H.S. Leistungssteuerung</string>
+    <string name="charger_hs_summary">Wenn Sie die H.S.-Leistungssteuerung deaktivieren, werden die Telefonsysteme direkt mit Strom versorgt, anstatt den Akku zu laden.\nDies reduziert die thermische Belastung, trägt dazu bei, die Spieleleistung aufrechtzuerhalten und die Lebensdauer Ihres Akkus zu verlängern.</string>
+    <string name="charger_bc_limit">Ladelimit</string>
+    <string name="charing_control_default_value">Bis 100 % aufladen</string>
+    <string name="charger_settings_footer">Wenn die Akku-Pflege aktiviert ist, beginnt das Gerät erst mit dem Laden, wenn die folgenden Voraussetzungen erfüllt sind:\n 1. Sie haben das Laden aktiviert, indem Sie "H.S. Leistungssteuerung" eingeschaltet haben.\n 2. Der Akkuladestand Ihres Geräts liegt unter dem von Ihnen festgelegten Ladelimit.\n\n\nDas Laden wird gestoppt, wenn ein bestimmter Prozentsatz erreicht ist, um die Lebensdauer des Akkus zu verlängern.\nWenn Sie diesen Grenzwert auf 80 % einstellen, erzielen Sie noch bessere Ergebnisse.</string>
+
+    <!-- H.S (Heat Suppression) Power Control QS Tile -->
+    <string name="charger_hs_tile">H.S. Leistungssteuerung</string>
+    <string name="charger_hs_toast">Die Akku-Pflege ist ausgeschaltet</string>
+
+</resources>

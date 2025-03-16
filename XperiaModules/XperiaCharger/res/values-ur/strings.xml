@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!--
+  ~ Copyright (C) 2024 XperiaLabs Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- App Name -->
+    <string name="app_name" translatable="true">ایکسپیریا چارجر</string>
+
+    <!-- Battery Care -->
+    <string name="charger_settings_title">باتری کی دیکھ بھال</string>
+    <string name="charger_settings_summary">بیٹری کی عمر کو بہتر بنائیں زیادہ سے زیادہ چارجنگ فیصد کو ایڈجسٹ کرکے اور دیگر چارجنگ سیٹنگز کو بہتر بنا کر</string>
+    <string name="charger_bc_enable">باتری کی دیکھ بھال استعمال کریں</string>
+    <string name="charger_hs_enable">H.S. طاقت کنٹرول</string>
+    <string name="charger_hs_summary">H.S. طاقت کنٹرول کو بند کرنا فون کے نظام کو براہ راست بجلی فراہم کرے گا بجائے اس کے کہ وہ بیٹری کو چارج کرے۔\n یہ حرارتی دباؤ کو کم کرتا ہے، جو گیمز کی کارکردگی کو برقرار رکھنے اور بیٹری کی طویل عمر کو یقینی بنانے میں مدد کرتا ہے۔</string>
+    <string name="charger_bc_limit">چارجنگ حد</string>
+    <string name="charing_control_default_value">100% تک چارج کریں</string>
+    <string name="charger_settings_footer">اگر بیٹری کی دیکھ بھال فعال ہو، تو یہ آلہ صرف پھر چارج شروع کرے گا جب یہ درج ذیل شرائط پوری ہو جائیں:1. آپ نے "H.S. طاقت کنٹرول" کو آن کر چارجنگ کو فعال کیا ہے۔2. آپ کے آلے کی بیٹری کا سطح آپ نے مقرر کردہ چارجنگ حد سے کم ہے۔\n\nچارجنگ کو بیٹری کی عمر بڑھانے کے لیے ایک مخصوص فیصد تک پہنچنے پر بند کر دیا جاتا ہے۔اس حد کو 80% پر رکھنے سے بہتر نتائج مل سکتے ہیں۔</string>
+
+    <!-- H.S (Heat Suppression) Power Control QS Tile -->
+    <string name="charger_hs_tile">H.S. طاقت کنٹرول</string>
+    <string name="charger_hs_toast">بیٹری کی دیکھ بھال بند ہے</string>
+</resources>

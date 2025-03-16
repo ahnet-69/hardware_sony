@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!--
+  ~ Copyright (C) 2024 XperiaLabs Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- App Name -->
+    <string name="app_name" translatable="true">Xperia зарядное устройство</string>
+
+    <!-- Battery Care -->
+    <string name="charger_settings_title">Уход за батареей</string>
+    <string name="charger_settings_summary">Оптимизируйте срок службы батареи, настроив максимальный процент зарядки и точно настроив другие параметры зарядки</string>
+    <string name="charger_bc_enable">Использовать уход за батареей</string>
+    <string name="charger_hs_enable">Управление мощностью H.S.</string>
+    <string name="charger_hs_summary">Отключение управления мощностью H.S. означает, что системы телефона будут получать питание напрямую, а не заряжать аккумулятор.\nЭто снизит термический стресс, что поможет сохранить производительность игр и продлить срок службы аккумулятора.</string>
+    <string name="charger_bc_limit">Лимит зарядки</string>
+    <string name="charing_control_default_value">Зарядить до 100%</string>
+    <string name="charger_settings_footer">Если уход за батареей включен, устройство начнет заряжаться только при выполнении следующих условий:\n 1. Вы активировали зарядку, переключившись на "Управление мощностью H.S.".\n 2. Уровень заряда батареи устройства ниже установленного вами лимита зарядки.\n\n\nЗарядка прекратится, когда будет достигнут определенный процент, чтобы продлить срок службы аккумулятора.\nУстановка этого лимита на 80% даст еще лучшие результаты.</string>
+
+    <!-- H.S (Heat Suppression) Power Control QS Tile -->
+    <string name="charger_hs_tile">Управление мощностью H.S.</string>
+    <string name="charger_hs_toast">Уход за батареей отключен</string>
+</resources>

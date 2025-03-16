@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2024 XperiaLabs Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- App Name -->
+    <string name="app_name" translatable="true">Cargador Xperia</string>
+
+    <!-- Battery Care -->
+    <string name="charger_settings_title">Cuidado de la Batería</string>
+    <string name="charger_settings_summary">Optimice la longevidad de la batería ajustando el porcentaje máximo de carga y afinando otras configuraciones de carga</string>
+    <string name="charger_bc_enable">Usar Cuidado de la Batería</string>
+    <string name="charger_hs_enable">Control de Energía H.S.</string>
+    <string name="charger_hs_summary">Al desactivar el Control de Energía H.S., se alimentarán los sistemas del teléfono directamente en lugar de cargar la batería.\nEsto reduce el estrés térmico, lo que ayuda a mantener el rendimiento de los juegos y a mantener la batería en buen estado durante más tiempo.</string>
+    <string name="charger_bc_limit">Límite de carga</string>
+    <string name="charing_control_default_value">Cargar al 100%</string>
+    <string name="charger_settings_footer">Si Cuidado de la batería está habilitado, el dispositivo comenzará a cargarse solo cuando se cumplan los siguientes requisitos:\n 1. Ha habilitado la carga activando "Control de Energía H.S.".\n 2. El nivel de batería de su dispositivo es inferior al límite de carga que ha establecido.\n\n\nLa carga se detiene cuando se alcanza un porcentaje específico para aumentar la vida útil de la batería.\nEstablecer ese límite en 80% produce resultados aún mejores.</string>
+
+    <!-- H.S (Heat Suppression) Power Control QS Tile -->
+    <string name="charger_hs_tile">Control de Energía H.S.</string>
+    <string name="charger_hs_toast">El cuidado de la batería está desactivado</string>
+</resources>

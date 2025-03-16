@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2024 XperiaLabs Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- App Name -->
+    <string name="app_name" translatable="true">Carregador Xperia</string>
+
+    <!-- Battery Care -->
+    <string name="charger_settings_title">Cuidados com a Bateria</string>
+    <string name="charger_bc_enable">Usar Cuidados com a Bateria</string>
+    <string name="charger_hs_enable">Controle de Potência H.S.</string>
+    <string name="charger_hs_summary">Desligar o Controle de Potência H.S. fará com que os sistemas do telefone recebam energia diretamente em vez de carregar a bateria.\nIsso reduz o estresse térmico, ajudando a manter o desempenho dos jogos e a prolongar a vida útil da bateria.</string>
+    <string name="charger_bc_limit">Limite de Carregamento</string>
+    <string name="charing_control_default_value">Carregar até 100%</string>
+    <string name="charger_settings_footer">Se o Cuidados com a Bateria estiver ativado, o dispositivo só começará a carregar quando as seguintes condições forem atendidas:\n 1. Você ativou o carregamento alternando o "Controle de Potência H.S." para ON.\n 2. O nível da bateria do dispositivo é inferior ao limite de carregamento definido por você.\n\n\nO carregamento será interrompido quando uma porcentagem específica for atingida para aumentar a vida útil da bateria.\nDefinir esse limite para 80% produz resultados ainda melhores.</string>
+
+    <!-- H.S (Heat Suppression) Power Control QS Tile -->
+    <string name="charger_hs_tile">Controle de Potência H.S.</string>
+    <string name="charger_hs_toast">O Cuidado de Bateria está desativado</string>
+</resources>
