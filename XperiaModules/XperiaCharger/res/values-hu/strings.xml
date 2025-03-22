@@ -32,4 +32,6 @@
     <!-- H.S (Heat Suppression) Power Control QS Tile -->
     <string name="charger_hs_tile">H.S. Teljesítményszabályozás</string>
     <string name="charger_hs_toast">Az akkumulátor karbantartása ki van kapcsolva</string>
+    <string name="charger_hs_unplugged">Csatlakoztassa a töltőt az H.S. teljesítményvezérlés használatához</string>
+    <string name="charger_hs_reconnected">Töltő csatlakoztatva: Az H.S. teljesítményvezérlés folytatása</string>
 </resources>

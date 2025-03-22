@@ -32,4 +32,6 @@
     <!-- H.S (Heat Suppression) Power Control QS Tile -->
     <string name="charger_hs_tile">H.S. 电源控制</string>
     <string name="charger_hs_toast">电池保养已关闭</string>
+    <string name="charger_hs_unplugged">连接充电器以使用 H.S. 电源控制</string>
+    <string name="charger_hs_reconnected">充电器已连接：正在恢复 H.S. 电源控制</string>
 </resources>

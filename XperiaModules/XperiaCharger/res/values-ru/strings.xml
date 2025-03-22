@@ -32,4 +32,6 @@
     <!-- H.S (Heat Suppression) Power Control QS Tile -->
     <string name="charger_hs_tile">Управление мощностью H.S.</string>
     <string name="charger_hs_toast">Уход за батареей отключен</string>
+    <string name="charger_hs_unplugged">Подключите зарядное устройство для использования H.S. управления питанием</string>
+    <string name="charger_hs_reconnected">Зарядное устройство подключено: возобновление работы H.S. управления питанием</string>
 </resources>

@@ -90,6 +90,16 @@ class ChargerSettingsFragment : PreferenceFragmentCompat(),
         return true
     }
 
+    override fun onResume() {
+        super.onResume()
+        context?.registerReceiver(chargerStateReceiver, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
+    }
+
+    override fun onPause() {
+        super.onPause()
+        context?.unregisterReceiver(chargerStateReceiver)
+    }
+
     private fun handleMainSwitchChange(isChecked: Boolean) {
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext())
 
@@ -114,6 +124,17 @@ class ChargerSettingsFragment : PreferenceFragmentCompat(),
         }
 
         chargerUtils.mainSwitch = isChecked
+    }
+
+    private val chargerStateReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            intent?.let {
+                val plugged = it.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1)
+                val isPlugged = plugged != 0
+
+                mChargingSwitch?.isEnabled = isPlugged
+            }
+        }
     }
 
     companion object {

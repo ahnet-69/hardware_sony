@@ -16,6 +16,9 @@
  */
 package com.xperia.settings.charger
 
+import android.content.Intent
+import android.content.IntentFilter
+import android.os.BatteryManager
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import android.widget.Toast
@@ -35,6 +38,15 @@ class ChargerTileService : TileService() {
 
     override fun onClick() {
         super.onClick()
+
+        val batteryStatus = registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
+        val plugged = batteryStatus?.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1) ?: -1
+        if (plugged == 0) {
+            Toast.makeText(this, R.string.charger_hs_unplugged, Toast.LENGTH_SHORT).show()
+            updateTileState()
+            return
+        }
+
         if (!chargerUtil.mainSwitch) {
             Toast.makeText(this, R.string.charger_hs_toast, Toast.LENGTH_SHORT).show()
             updateTileState()

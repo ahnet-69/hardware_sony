@@ -32,5 +32,6 @@
     <!-- H.S (Heat Suppression) Power Control QS Tile -->
     <string name="charger_hs_tile">H.S. 전력 제어</string>
     <string name="charger_hs_toast">배터리 케어가 꺼져 있습니다</string>
-
+    <string name="charger_hs_unplugged">H.S. 전원 제어를 사용하려면 충전기를 연결하세요</string>
+    <string name="charger_hs_reconnected">충전기 연결됨: H.S. 전원 제어 재개</string>
 </resources>

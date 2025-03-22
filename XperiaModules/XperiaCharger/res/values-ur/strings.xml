@@ -32,4 +32,6 @@
     <!-- H.S (Heat Suppression) Power Control QS Tile -->
     <string name="charger_hs_tile">H.S. طاقت کنٹرول</string>
     <string name="charger_hs_toast">بیٹری کی دیکھ بھال بند ہے</string>
+    <string name="charger_hs_unplugged">H.S. پاور کنٹرول استعمال کرنے کے لیے چارجر کو منسلک کریں</string>
+    <string name="charger_hs_reconnected">چارجر منسلک: H.S. پاور کنٹرول دوبارہ شروع ہو رہا ہے</string>
 </resources>

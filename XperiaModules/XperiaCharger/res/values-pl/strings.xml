@@ -32,4 +32,6 @@
     <!-- H.S (Heat Suppression) Power Control QS Tile -->
     <string name="charger_hs_tile">Kontrola mocy H.S.</string>
     <string name="charger_hs_toast">Opieka nad baterią jest wyłączona</string>
+    <string name="charger_hs_unplugged">Podłącz ładowarkę, aby używać H.S. Power Control</string>
+    <string name="charger_hs_reconnected">Ładowarka podłączona: Wznawianie H.S. Power Control</string>
 </resources>

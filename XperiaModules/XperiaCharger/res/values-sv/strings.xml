@@ -32,4 +32,6 @@
     <!-- H.S (Heat Suppression) Power Control QS Tile -->
     <string name="charger_hs_tile">H.S. Strömstyrningskontroll</string>
     <string name="charger_hs_toast">Batterivård är avstängt</string>
+    <string name="charger_hs_unplugged">Anslut laddaren för att använda H.S. Power Control</string>
+    <string name="charger_hs_reconnected">Laddare ansluten: Återupptar H.S. Power Control</string>
 </resources>

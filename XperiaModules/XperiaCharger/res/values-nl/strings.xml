@@ -32,5 +32,6 @@
     <!-- H.S (Heat Suppression) Power Control QS Tile -->
     <string name="charger_hs_tile">H.S. Stroombeheer</string>
     <string name="charger_hs_toast">Batterijzorg is uitgeschakeld</string>
-
+    <string name="charger_hs_unplugged">Sluit de oplader aan om H.S. Power Control te gebruiken</string>
+    <string name="charger_hs_reconnected">Oplader aangesloten: H.S. Power Control hervatten</string>
 </resources>

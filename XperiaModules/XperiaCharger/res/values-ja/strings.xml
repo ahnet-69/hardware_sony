@@ -32,4 +32,6 @@
     <!-- H.S (Heat Suppression) Power Control QS Tile -->
     <string name="charger_hs_tile">H.S. 電力制御</string>
     <string name="charger_hs_toast">バッテリーケアがオフになっています</string>
+    <string name="charger_hs_unplugged">チャージャーを接続して H.S. パワーコントロールを使用します</string>
+    <string name="charger_hs_reconnected">充電器接続: H.S. パワーコントロールを再開します</string>
 </resources>

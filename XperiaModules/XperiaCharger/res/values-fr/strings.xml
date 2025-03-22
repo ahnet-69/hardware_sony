@@ -32,4 +32,6 @@
     <!-- H.S (Heat Suppression) Power Control QS Tile -->
     <string name="charger_hs_tile">Contrôle de L\'Alimentation H.S.</string>
     <string name="charger_hs_toast">Le soin de la batterie est désactivé</string>
+    <string name="charger_hs_unplugged">Connectez le chargeur pour utiliser le contrôle d\'alimentation H.S.</string>
+    <string name="charger_hs_reconnected">Chargeur connecté: Reprise du contrôle d\'alimentation H.S.</string>
 </resources>

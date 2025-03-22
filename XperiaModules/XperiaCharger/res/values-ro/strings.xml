@@ -32,4 +32,6 @@
     <!-- H.S (Heat Suppression) Power Control QS Tile -->
     <string name="charger_hs_tile">Controlul Puterii H.S.</string>
     <string name="charger_hs_toast">Îngrijirea bateriei este dezactivată</string>
+    <string name="charger_hs_unplugged">Conectează încărcătorul pentru a utiliza H.S. Power Control</string>
+    <string name="charger_hs_reconnected">Încărcător conectat: Reluarea H.S. Power Control</string>
 </resources>
