@@ -16,18 +16,13 @@
   -->
 
 <resources>
-    <!-- App Name -->
     <string name="app_name" translatable="true">Xperia Haptics</string>
-
-    <!-- Media Vibration Related Strings -->
-    <string name="mediavib_title">Динамическая вибрация</string>
-    <string name="mediavib_enable">Включить</string>
-    <string name="mediavib_summary">Функция DSP-вибратора</string>
-    <string name="mediavib_level_title">Уровень</string>
-    <string name="mediavib_latency_title">Задержка вибрации</string>
-    <string name="mediavib_description">Вибрация в такт музыке</string>
-
-    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_title">Динамическая Вибрация</string>
+    <string name="mediavib_enable">Используйте Динамическая Вибрация</string>
+    <string name="mediavib_summary">Динамическая вибрация улучшит ваш медиа-опыт за счёт вибраций при просмотре фильмов, видео или прослушивании музыки</string>
+    <string name="mediavib_level_title">Уровень интенсивности</string>
+    <string name="mediavib_latency_title">Синхронизация</string>
+    <string name="mediavib_description">Как использовать\n\nВы можете настроить эффект динамической вибрации для каждого медиаприложения.\nЗапустите приложение и воспроизведите любой контент, затем смахните вниз панель быстрых настроек, коснитесь плитки и выберите эффект.\nПеремещение ползунка влево приведет к задержке вибрации, а перемещение вправо приведет к более ранней вибрации устройства.\n\nСоветы\n\nЭта функция доступна, если в Настройках XperiaLabs или на плитке быстрых настроек включена Динамическая Вибрация.</string>
     <string name="mediavib_tile_enable">Уровень: %1$d</string>
     <string name="mediavib_tile_disable">Выкл</string>
 </resources>

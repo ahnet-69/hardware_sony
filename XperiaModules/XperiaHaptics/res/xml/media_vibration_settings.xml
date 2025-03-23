@@ -18,7 +18,8 @@
 
     <com.xperia.settings.haptics.MediaVibrationLatencyPreference
         android:key="mediavib_latency"
-        android:title="@string/mediavib_latency_title" />
+        android:title="@string/mediavib_latency_title"
+        android:selectable="false" />
 
     <com.android.settingslib.widget.FooterPreference
         android:key="footer_preference"

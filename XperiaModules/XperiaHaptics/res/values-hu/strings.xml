@@ -16,18 +16,13 @@
   -->
 
 <resources>
-    <!-- App Name -->
     <string name="app_name" translatable="true">Xperia Haptika</string>
-
-    <!-- Media Vibration Related Strings -->
     <string name="mediavib_title">Dinamikus Rezgés</string>
-    <string name="mediavib_enable">Engedélyezés</string>
-    <string name="mediavib_summary">DSP rezgő funkció</string>
-    <string name="mediavib_level_title">Szint</string>
-    <string name="mediavib_latency_title">Rezgés késleltetés</string>
-    <string name="mediavib_description">Rezgés a zenével</string>
-
-    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_enable">Használja a Dinamikus Rezgés</string>
+    <string name="mediavib_summary">A dinamikus rezgés javítja a médiaélményedet azzal, hogy rezgéseket biztosít film, videó lejátszásakor vagy zenehallgatás közben</string>
+    <string name="mediavib_level_title">Intenzitás Szintje</string>
+    <string name="mediavib_latency_title">Szinkronizálás</string>
+    <string name="mediavib_description">Használati Útmutató\n\nAz egyes médiaalkalmazásokhoz beállíthatja a Dinamikus Rezgés hatást.\nIndítson el egy alkalmazást, és játssza le a kívánt tartalmat, majd húzza lefelé a Gyorsbeállítások panelt, koppintson a csempére, és válasszon ki egy effektust.\nHa a csúszkát balra húzza, az késlelteti a rezgéseket, míg jobbra húzva az eszköz korábban fog rezegni.\n\nTippek\n\nEz a funkció akkor érhető el, ha a Dinamikus Rezgés be van kapcsolva az XperiaLabs Beállításaiban vagy a Gyorsbeállítások csempén keresztül.</string>
     <string name="mediavib_tile_enable">Szint: %1$d</string>
     <string name="mediavib_tile_disable">Ki</string>
 </resources>

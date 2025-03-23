@@ -16,18 +16,13 @@
   -->
 
 <resources>
-    <!-- App Name -->
-    <string name="app_name" translatable="true">ایکسپیریا ہیپٹکس</string>
-
-    <!-- Media Vibration Related Strings -->
-    <string name="mediavib_title">متحرک کمپن</string>
-    <string name="mediavib_enable">فعال کریں</string>
-    <string name="mediavib_summary">ڈی ایس پی وائبریٹر فنکشن</string>
-    <string name="mediavib_level_title">سطح</string>
-    <string name="mediavib_latency_title">کمپن تاخیر</string>
-    <string name="mediavib_description">موسیقی کے ساتھ کمپن</string>
-
-    <!-- Media Vibration QS Tile -->
+    <string name="app_name" translatable="true">Xperia ہیپٹکس</string>
+    <string name="mediavib_title">ڈائنامک وائبریشن</string>
+    <string name="mediavib_enable">ڈائنامک وائبریشن استعمال کریں۔</string>
+    <string name="mediavib_summary">ڈائنامک وائبریشن آپ کے میڈیا تجربے کو بہتر بنائے گی جب آپ فلم، ویڈیو چلائیں یا موسیقی سنیں</string>
+    <string name="mediavib_level_title">شدت کی سطح</string>
+    <string name="mediavib_latency_title">مطابقت پذیری</string>
+    <string name="mediavib_description">استعمال کرنے کا طریقہ\n\nآپ ہر میڈیا ایپ کے لیے ڈائنامک وائبریشن اثر کو ایڈجسٹ کر سکتے ہیں۔\nایک ایپ شروع کریں اور اپنی پسند کا مواد چلائیں، پھر کوئیک سیٹنگ پینل کو نیچے سوائپ کریں، ٹائل پر ٹیپ کریں اور ایک اثر منتخب کریں۔\nسلائیڈر کو بائیں جانب منتقل کرنے سے وائبریشن میں تاخیر ہوگی جب کہ اسے دائیں جانب منتقل کرنے سے ڈیوائس پہلے وائبریٹ ہوگی۔\n\nٹپس\n\nیہ فیچر اس وقت دستیاب ہوتا ہے جب ڈائنامک وائبریشن XperiaLabs سیٹنگز میں یا کوئیک سیٹنگز ٹائل کے ذریعے آن ہوتا ہے۔</string>
     <string name="mediavib_tile_enable">سطح: %1$d</string>
     <string name="mediavib_tile_disable">بند</string>
 </resources>

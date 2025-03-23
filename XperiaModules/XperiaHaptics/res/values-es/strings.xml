@@ -16,18 +16,13 @@
   -->
 
 <resources>
-    <!-- App Name -->
-    <string name="app_name" translatable="true">Xperia Haptics</string>
-
-    <!-- Media Vibration Related Strings -->
+    <string name="app_name" translatable="true">Háptica Xperia</string>
     <string name="mediavib_title">Vibración Dinámica</string>
-    <string name="mediavib_enable">Habilitar</string>
-    <string name="mediavib_summary">Función de vibrador DSP</string>
-    <string name="mediavib_level_title">Nivel</string>
-    <string name="mediavib_latency_title">Latencia de vibración</string>
-    <string name="mediavib_description">Vibrar con la música</string>
-
-    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_enable">Usar Vibración Dinámica</string>
+    <string name="mediavib_summary">La vibración dinámica mejorará tu experiencia multimedia con vibraciones al reproducir una película, video o al escuchar música</string>
+    <string name="mediavib_level_title">Nivel de Intensidad</string>
+    <string name="mediavib_latency_title">Sincronización</string>
+    <string name="mediavib_description">Cómo Usar\n\nPuede ajustar el efecto de Vibración Dinámica para cada aplicación multimedia.\nInicie una aplicación y reproduzca el contenido que desee, luego deslice hacia abajo el panel de Configuración rápida, toque el mosaico y seleccione un efecto.\nDeslizar el control deslizante hacia la izquierda retrasará las vibraciones, mientras que deslizarlo hacia la derecha hará que el dispositivo vibre antes.\n\nConsejos\n\nEsta función está disponible mientras la Vibración Dinámica esté activada en la Configuración de XperiaLabs o a través del mosaico de Configuración rápida.</string>
     <string name="mediavib_tile_enable">Nivel: %1$d</string>
     <string name="mediavib_tile_disable">Apagado</string>
 </resources>

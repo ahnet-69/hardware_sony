@@ -19,15 +19,13 @@
     <!-- App Name -->
     <string name="app_name" translatable="true">Xperia Haptics</string>
 
-    <!-- Media Vibration Related Strings -->
+    <!-- Media Vibration -->
     <string name="mediavib_title">Dynamic Vibration</string>
-    <string name="mediavib_enable">Enable</string>
-    <string name="mediavib_summary">DSP vibrator function</string>
-    <string name="mediavib_level_title">Level</string>
-    <string name="mediavib_latency_title">Vibration Latency</string>
-    <string name="mediavib_description">Vibrate with music</string>
-
-    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_enable">Use Dynamic Vibration</string>
+    <string name="mediavib_summary">Dynamic Vibration will enhance your media experience with vibrations when playing a movie, video, or listening to music</string>
+    <string name="mediavib_level_title">Intensity Level</string>
+    <string name="mediavib_latency_title">Synchronisation</string>
+    <string name="mediavib_description">How to Use\n\nYou can adjust the Dynamic Vibration effect for each media app.\nStart an app and play the content of your choice, then swipe down the Quick Settings panel, tap on the tile and select an effect.\nPutting the slider to the left will delay the vibrations while putting it to the right will make the device vibrate earlier.\n\nTips\n\nThis feature is available while Dynamic Vibration is turned on in the XperiaLabs Settings or via the Quick Settings tile.</string>
     <string name="mediavib_tile_enable">Level: %1$d</string>
     <string name="mediavib_tile_disable">Off</string>
 </resources>

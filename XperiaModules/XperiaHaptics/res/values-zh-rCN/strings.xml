@@ -16,18 +16,13 @@
   -->
 
 <resources>
-    <!-- App Name -->
     <string name="app_name" translatable="true">Xperia 触感</string>
-
-    <!-- Media Vibration Related Strings -->
     <string name="mediavib_title">动态振动</string>
-    <string name="mediavib_enable">启用</string>
-    <string name="mediavib_summary">DSP 振动器功能</string>
-    <string name="mediavib_level_title">级别</string>
-    <string name="mediavib_latency_title">振动延迟</string>
-    <string name="mediavib_description">随音乐振动</string>
-
-    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_enable">使用动态振动</string>
+    <string name="mediavib_summary">动态震动将在播放电影、视频或听音乐时，通过震动增强您的媒体体验</string>
+    <string name="mediavib_level_title">强度等级</string>
+    <string name="mediavib_latency_title">同步</string>
+    <string name="mediavib_description">如何使用\n\n您可以调整每个媒体应用的动态振动效果。\n启动应用并播放您选择的内容，然后向下滑动快速设置面板，点击图块并选择效果。\n向左滑动滑块将延迟振动，而向右滑动则会使设备更早振动。\n\n提示\n\n此功能在 XperiaLabs 设置中开启动态震动或通过快捷设置磁贴启用时可用。</string>
     <string name="mediavib_tile_enable">级别: %1$d</string>
     <string name="mediavib_tile_disable">关闭</string>
 </resources>

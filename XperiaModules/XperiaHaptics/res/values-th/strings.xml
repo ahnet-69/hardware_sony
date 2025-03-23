@@ -16,18 +16,13 @@
   -->
 
 <resources>
-    <!-- App Name -->
-    <string name="app_name" translatable="true">Xperia Haptics</string>
-
-    <!-- Media Vibration Related Strings -->
+    <string name="app_name" translatable="true">Xperia สัมผัส</string>
     <string name="mediavib_title">การสั่นแบบไดนามิก</string>
-    <string name="mediavib_enable">เปิดใช้งาน</string>
-    <string name="mediavib_summary">ฟังก์ชันการสั่นแบบ DSP</string>
-    <string name="mediavib_level_title">ระดับ</string>
-    <string name="mediavib_latency_title">ความหน่วงเวลาการสั่น</string>
-    <string name="mediavib_description">สั่นตามเพลง</string>
-
-    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_enable">ใช้การสั่นสะเทือนแบบไดนามิก</string>
+    <string name="mediavib_summary">การสั่นไหวแบบไดนามิกจะช่วยยกระดับประสบการณ์สื่อของคุณด้วยการสั่นเมื่อเล่นภาพยนตร์ วิดีโอ หรือฟังเพลง</string>
+    <string name="mediavib_level_title">ระดับความเข้ม</string>
+    <string name="mediavib_latency_title">การซิงโครไนซ์</string>
+    <string name="mediavib_description">วิธีใช้\n\nคุณสามารถปรับเอฟเฟกต์การสั่นแบบไดนามิกสำหรับแต่ละแอปสื่อได้\nเริ่มแอปและเล่นเนื้อหาที่คุณเลือก จากนั้นปัดลงแผงการตั้งค่าด่วน แตะที่ไทล์ และเลือกเอฟเฟกต์\nการเลื่อนแถบเลื่อนไปทางซ้ายจะทำให้การสั่นสะเทือนล่าช้า ในขณะที่การเลื่อนไปทางขวาจะทำให้อุปกรณ์สั่นเร็วขึ้น\n\nเคล็ดลับ\n\คุณสมบัตินี้จะพร้อมใช้งานในขณะที่เปิดใช้งานการสั่นแบบไดนามิกในการตั้งค่า XperiaLabs หรือผ่านไทล์การตั้งค่าด่วน</string>
     <string name="mediavib_tile_enable">ระดับ: %1$d</string> 
     <string name="mediavib_tile_disable">ปิด</string>
 </resources>

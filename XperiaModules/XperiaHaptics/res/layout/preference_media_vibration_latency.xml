@@ -45,6 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="15dip"
-        android:max="500" />
+        android:max="500" 
+        android:progress="250" />
 
 </LinearLayout>

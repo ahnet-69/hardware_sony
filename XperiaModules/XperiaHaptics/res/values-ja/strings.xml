@@ -16,18 +16,13 @@
   -->
 
 <resources>
-    <!-- App Name -->
     <string name="app_name" translatable="true">Xperia ハプティクス</string>
-
-    <!-- Media Vibration Related Strings -->
     <string name="mediavib_title">ダイナミック振動</string>
-    <string name="mediavib_enable">有効</string>
-    <string name="mediavib_summary">DSP振動機能</string>
-    <string name="mediavib_level_title">レベル</string>
-    <string name="mediavib_latency_title">振動レイテンシ</string>
-    <string name="mediavib_description">音楽に連動した振動</string>
-
-    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_enable">ダイナミックバイブレーションを使用する</string>
+    <string name="mediavib_summary">ダイナミックバイブレーションは、映画やビデオの再生、または音楽鑑賞時に振動を利用して、あなたのメディア体験を向上させます</string>
+    <string name="mediavib_level_title">強度レベル</string>
+    <string name="mediavib_latency_title">同期</string>
+    <string name="mediavib_description">使用方法\n\n各メディアアプリのダイナミック振動効果を調整できます。\nアプリを起動して、任意のコンテンツを再生し、クイック設定パネルを下にスワイプし、タイルをタップしてエフェクトを選択します。\nスライダーを左に動かすと振動が遅れ、右に動かすとデバイスが早く振動します。\n\nヒント\n\nこの機能は、XperiaLabs設定またはクイック設定タイルでダイナミックバイブレーションがオンになっている場合に利用できます。</string>
     <string name="mediavib_tile_enable">レベル: %1$d</string>
     <string name="mediavib_tile_disable">オフ</string>
 </resources>

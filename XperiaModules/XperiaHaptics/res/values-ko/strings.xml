@@ -16,18 +16,13 @@
   -->
 
 <resources>
-    <!-- App Name -->
-    <string name="app_name" translatable="true">엑스페리아 햅틱</string>
-
-    <!-- Media Vibration Related Strings -->
+    <string name="app_name" translatable="true">Xperia 햅틱</string>
     <string name="mediavib_title">다이내믹 진동</string>
-    <string name="mediavib_enable">사용</string>
-    <string name="mediavib_summary">DSP 진동자 기능</string>
-    <string name="mediavib_level_title">레벨</string>
-    <string name="mediavib_latency_title">진동 지연 시간</string>
-    <string name="mediavib_description">음악에 맞춰 진동</string>
-
-    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_enable">동적 진동을 사용하세요</string>
+    <string name="mediavib_summary">다이나믹 바이브레이션은 영화나 비디오 재생, 음악 감상 시 진동을 통해 미디어 경험을 향상시킵니다</string>
+    <string name="mediavib_level_title">강도 레벨</string>
+    <string name="mediavib_latency_title">동기화</string>
+    <string name="mediavib_description">사용 방법\n\n각 미디어 앱에 대한 다이내믹 진동 효과를 조정할 수 있습니다。\n앱을 시작하고 원하는 콘텐츠를 재생한 다음 빠른 설정 패널을 아래로 스와이프하고 타일을 탭하여 효과를 선택합니다.\n슬라이더를 왼쪽으로 움직이면 진동이 지연되고 오른쪽으로 움직이면 장치가 더 빨리 진동합니다.\n\n팁\n\n이 기능은 XperiaLabs 설정이나 빠른 설정 타일에서 동적 진동이 켜져 있는 동안 사용할 수 있습니다.</string>
     <string name="mediavib_tile_enable">레벨: %1$d</string>
     <string name="mediavib_tile_disable">꺼짐</string>
 </resources>

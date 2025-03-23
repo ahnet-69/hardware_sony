@@ -16,18 +16,13 @@
   -->
 
 <resources>
-    <!-- App Name -->
     <string name="app_name" translatable="true">Xperia Haptiek</string>
-
-    <!-- Media Vibration Related Strings -->
     <string name="mediavib_title">Dynamische Trilling</string>
-    <string name="mediavib_enable">Inschakelen</string>
-    <string name="mediavib_summary">DSP-vibratiefunctie</string>
-    <string name="mediavib_level_title">Niveau</string>
-    <string name="mediavib_latency_title">Trillingsvertraging</string>
-    <string name="mediavib_description">Trillen met muziek</string>
-
-    <!-- Media Vibration QS Tile -->
+    <string name="mediavib_enable">Gebruik Dynamische Trillingen</string>
+    <string name="mediavib_summary">Dynamische vibratie zal je media-ervaring verbeteren met trillingen tijdens het afspelen van een film, video of bij het luisteren naar muziek</string>
+    <string name="mediavib_level_title">Intensiteitsniveau</string>
+    <string name="mediavib_latency_title">Synchronisatie</string>
+    <string name="mediavib_description">Hoe te Gebruiken\n\nU kunt het Dynamic Vibration-effect voor elke media-app aanpassen.\nStart een app en speel de gewenste content af, swipe vervolgens omlaag in het paneel Snelle instellingen, tik op de tegel en selecteer een effect.\nAls u de schuifregelaar naar links schuift, worden de trillingen vertraagd, terwijl de trillingen eerder beginnen als u hem naar rechts schuift.\n\nTips\n\nDeze functie is beschikbaar wanneer Dynamische Trilling is ingeschakeld in de XperiaLabs-Instellingen of via de tegel Snelle instellingen.</string>
     <string name="mediavib_tile_enable">Niveau: %1$d</string>
     <string name="mediavib_tile_disable">Uit</string>
 </resources>
