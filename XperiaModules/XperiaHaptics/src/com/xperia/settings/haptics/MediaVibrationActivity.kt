@@ -12,8 +12,7 @@ import com.android.settingslib.collapsingtoolbar.R
 class MediaVibrationActivity : CollapsingToolbarBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        fragmentManager.beginTransaction().replace(
+        supportFragmentManager.beginTransaction().replace(
             R.id.content_frame,
             MediaVibrationSettingsFragment(), TAG_MEDIAVIB
         ).commit()

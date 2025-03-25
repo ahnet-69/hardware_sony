@@ -18,7 +18,7 @@ object MediaVibration {
         )
         val paramStr = if (enable) "1" else "0"
         am!!.setParameters("somc.media_vibration=$paramStr")
-        Settings.Secure.putInt(
+        Settings.Global.putInt(
             context.contentResolver,
             MediaVibrationSettingsFragment.PREF_MEDIA_VIB_ENABLE,
             if (enable) 1 else 0
@@ -56,7 +56,7 @@ object MediaVibration {
             AudioManager::class.java
         )
         am!!.setParameters("somc.media_vibration_vol_idx=$level")
-        Settings.Secure.putInt(
+        Settings.Global.putInt(
             context.contentResolver,
             MediaVibrationSettingsFragment.PREF_MEDIA_VIB_LEVEL,
             level
@@ -68,7 +68,7 @@ object MediaVibration {
             AudioManager::class.java
         )
         am!!.setParameters("somc.media_vibration_bt_delay=${500 - latency}")
-        Settings.Secure.putInt(
+        Settings.Global.putInt(
             context.contentResolver,
             MediaVibrationLatencyPreference.PREF_MEDIA_VIB_LATENCY,
             latency
@@ -77,7 +77,7 @@ object MediaVibration {
 
     fun getMediaVibrationState(context: Context): Boolean {
         val state =
-            Settings.Secure.getInt(
+            Settings.Global.getInt(
                 context.contentResolver,
                 MediaVibrationSettingsFragment.PREF_MEDIA_VIB_ENABLE,
                 0
@@ -87,7 +87,7 @@ object MediaVibration {
 
     fun getMediaVibrationLevel(context: Context): Int {
         val level =
-            Settings.Secure.getInt(
+            Settings.Global.getInt(
                 context.contentResolver,
                 MediaVibrationSettingsFragment.PREF_MEDIA_VIB_LEVEL,
                 0
@@ -97,7 +97,7 @@ object MediaVibration {
 
     fun getMediaVibrationLatency(context: Context): Int {
         val latency =
-            Settings.Secure.getInt(
+            Settings.Global.getInt(
                 context.contentResolver,
                 MediaVibrationLatencyPreference.PREF_MEDIA_VIB_LATENCY,
                 0
