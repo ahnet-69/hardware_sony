@@ -14,13 +14,13 @@
         app:iconSpaceReserved="false"
         app:title="@string/display_cm_header">
 
-        <com.xperia.settings.preferences.SecureSettingSwitchPreference
+        <SwitchPreferenceCompat
                           app:key="switchCreatorMode"
                           app:iconSpaceReserved="false"
                           app:title="@string/display_cm_enable"
                           app:summary="@string/display_cm_summary" />
 
-        <com.xperia.settings.preferences.SecureSettingSwitchPreference
+        <SwitchPreferenceCompat
                           app:key="switchXRealityMode"
                           app:iconSpaceReserved="false"
                           app:title="@string/display_xrp_enable"

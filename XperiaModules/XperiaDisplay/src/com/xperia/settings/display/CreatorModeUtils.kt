@@ -41,14 +41,14 @@ class CreatorModeUtils(private val context: Context) : IDisplayCallback.Stub() {
     private val MAX = 255f
 
     val isEnabled: Boolean
-        get() = Settings.Secure.getInt(context.contentResolver, CREATOR_MODE_ENABLE, 0) != 0
+        get() = Settings.Global.getInt(context.contentResolver, CREATOR_MODE_ENABLE, 0) != 0
 
     fun setMode(enabled: Boolean) {
         semcDisplayService.set_sspp_color_mode(if (enabled) 0 else 1)
         colorDisplayManager.setColorMode(if (enabled) 0 else 3)
         semcDisplayService.set_color_mode(if (enabled) 0 else 1)
 
-        Settings.Secure.putInt(context.contentResolver, CREATOR_MODE_ENABLE, if (enabled) 1 else 0)
+        Settings.Global.putInt(context.contentResolver, CREATOR_MODE_ENABLE, if (enabled) 1 else 0)
     }
 
     fun initialize() {
@@ -102,6 +102,6 @@ class CreatorModeUtils(private val context: Context) : IDisplayCallback.Stub() {
 
     companion object {
         private const val TAG = "CreatorModeUtils"
-        private const val CREATOR_MODE_ENABLE = "cm_enable"
+        const val CREATOR_MODE_ENABLE = "cm_enable"
     }
 }

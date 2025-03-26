@@ -1,12 +1,15 @@
 /*
- * Copyright (C) 2023-2024 XperiaLabs Project
+ * Copyright (C) 2025 XperiaLabs Project
  * Copyright (C) 2022 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
 package com.xperia.settings.display
 
+import android.database.ContentObserver
 import android.os.Bundle
+import android.os.Handler
+import android.provider.Settings
 import android.util.ArraySet
 import android.view.View
 import android.view.ViewGroup
@@ -24,13 +27,13 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 import com.xperia.settings.display.R
-
-import com.xperia.settings.preferences.SecureSettingSwitchPreference
+import com.xperia.settings.display.XRealityModeUtils.Companion.XREALITY_MODE_ENABLE
+import com.xperia.settings.display.CreatorModeUtils.Companion.CREATOR_MODE_ENABLE
 
 const val CREATOR_MODE_KEY = "switchCreatorMode"
 const val XREALITY_MODE_KEY = "switchXRealityMode"
 
-class DisplaySettingsFragment : PreferenceFragment(), Preference.OnPreferenceChangeListener {
+class DisplaySettingsFragment : PreferenceFragmentCompat(), Preference.OnPreferenceChangeListener {
     private lateinit var creatorModeUtils: CreatorModeUtils
     private lateinit var xrealityModeUtils: XRealityModeUtils
 
@@ -52,36 +55,37 @@ companion object {
     private var mDotIndicators: Array<ImageView?>? = null
     private var mViewPagerImages: Array<View?>? = null
 
+    private lateinit var creatorModePreference: SwitchPreferenceCompat
+    private lateinit var xRealityModePreference: SwitchPreferenceCompat
+
+    private val settingsObserver = object : ContentObserver(Handler()) {
+        override fun onChange(selfChange: Boolean) {
+            creatorModePreference.isChecked = Settings.Global.getInt(requireContext().contentResolver, CREATOR_MODE_ENABLE, 0) != 0
+            xRealityModePreference.isChecked = Settings.Global.getInt(requireContext().contentResolver, XREALITY_MODE_ENABLE, 0) != 0
+        }
+    }
+
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         addPreferencesFromResource(R.xml.display_settings)
-        creatorModeUtils = CreatorModeUtils(context)
-        xrealityModeUtils = XRealityModeUtils(context)
+        creatorModeUtils = CreatorModeUtils(requireContext())
+        xrealityModeUtils = XRealityModeUtils(requireContext())
 
         addViewPager()
 
-        val creatorModePreference = findPreference<SecureSettingSwitchPreference>(CREATOR_MODE_KEY)!!
+        creatorModePreference = findPreference<SwitchPreferenceCompat>(CREATOR_MODE_KEY)!!
         creatorModePreference.isChecked = creatorModeUtils.isEnabled
         creatorModePreference.onPreferenceChangeListener = this
 
-        val xRealityModePreference = findPreference<SecureSettingSwitchPreference>(XREALITY_MODE_KEY)
-        xRealityModePreference?.let {
-            it.isChecked = xrealityModeUtils.isEnabled
-            it.onPreferenceChangeListener = this
-        }
+        xRealityModePreference = findPreference<SwitchPreferenceCompat>(XREALITY_MODE_KEY)!!
+        xRealityModePreference.isChecked = xrealityModeUtils.isEnabled
+        xRealityModePreference.onPreferenceChangeListener = this
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
         when(preference.key) {
             CREATOR_MODE_KEY -> creatorModeUtils.setMode(newValue as Boolean)
-            XREALITY_MODE_KEY -> {
-                if (newValue as Boolean) {
-                    xrealityModeUtils.setMode(true)
-                } else {
-                    xrealityModeUtils.setMode(false)
-                }
-            }
+            XREALITY_MODE_KEY -> xrealityModeUtils.setMode(newValue as Boolean)
         }
-
         return true
     }
 
@@ -131,7 +135,7 @@ companion object {
         val viewGroup = preview.findViewById<ViewGroup>(R.id.viewGroup)
         mDotIndicators = arrayOfNulls(mPageList!!.size)
         for (i in mPageList!!.indices) {
-            val imageView = ImageView(context)
+            val imageView = ImageView(requireContext())
             val lp = ViewGroup.MarginLayoutParams(DOT_INDICATOR_SIZE, DOT_INDICATOR_SIZE)
             lp.setMargins(DOT_INDICATOR_LEFT_PADDING, 0, DOT_INDICATOR_RIGHT_PADDING, 0)
             imageView.layoutParams = lp
@@ -152,7 +156,7 @@ companion object {
                     }
                 } else {
                     mViewPagerImages!![position]!!.contentDescription =
-                    getContext().getString(R.string.creator_mode_content_description)
+                    requireContext().getString(R.string.creator_mode_content_description)
                     updateIndicator(position)
                 }
             }
@@ -184,6 +188,26 @@ companion object {
             mViewArrowPrevious!!.visibility = View.VISIBLE
             mViewArrowNext!!.visibility = View.VISIBLE
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        requireContext().contentResolver?.registerContentObserver(
+            Settings.Global.getUriFor(CREATOR_MODE_ENABLE),
+            true,
+            settingsObserver
+        )
+        requireContext().contentResolver?.registerContentObserver(
+            Settings.Global.getUriFor(XREALITY_MODE_ENABLE),
+            true,
+            settingsObserver
+        )
+        settingsObserver.onChange(false, null)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        requireContext().contentResolver.unregisterContentObserver(settingsObserver)
     }
 
     class ColorPagerAdapter(private val mPageViewList: ArrayList<View>) : PagerAdapter() {

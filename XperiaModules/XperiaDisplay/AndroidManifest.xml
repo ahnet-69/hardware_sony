@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2023 XperiaLabs Project
+     Copyright (C) 2025 XperiaLabs Project
 
      SPDX-License-Identifier: Apache-2.0
 -->
@@ -13,7 +13,7 @@
           android:sharedUserId="android.uid.system">
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_GLOBAL_SETTINGS"/>
 
     <uses-sdk
         android:minSdkVersion="34"

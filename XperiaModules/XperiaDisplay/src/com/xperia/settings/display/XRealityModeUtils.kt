@@ -37,14 +37,14 @@ class XRealityModeUtils(private val context: Context) : IDisplayCallback.Stub() 
     }
 
     val isEnabled: Boolean
-        get() = Settings.Secure.getInt(context.contentResolver, XREALITY_MODE_ENABLE, 0) != 0
+        get() = Settings.Global.getInt(context.contentResolver, XREALITY_MODE_ENABLE, 0) != 0
 
     fun setMode(enabled: Boolean) {
         semcDisplayService.set_sspp_color_mode(if (enabled) 2 else 1)
         colorDisplayManager.setColorMode(if (enabled) 1 else 3)
         semcDisplayService.set_color_mode(if (enabled) 2 else 1)
 
-        Settings.Secure.putInt(context.contentResolver, XREALITY_MODE_ENABLE, if (enabled) 1 else 0)
+        Settings.Global.putInt(context.contentResolver, XREALITY_MODE_ENABLE, if (enabled) 1 else 0)
     }
 
     fun initialize() {
@@ -99,6 +99,6 @@ class XRealityModeUtils(private val context: Context) : IDisplayCallback.Stub() 
 
     companion object {
         private const val TAG = "XRealityUtils"
-        private const val XREALITY_MODE_ENABLE = "xr_enable"
+        const val XREALITY_MODE_ENABLE = "xr_enable"
     }
 }
