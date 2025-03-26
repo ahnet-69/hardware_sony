@@ -6,8 +6,10 @@
 package com.xperia.settings.audio
 
 import android.content.Context
+import android.database.ContentObserver
 import android.media.AudioManager
 import android.os.Bundle
+import android.os.Handler
 import android.provider.Settings
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
@@ -18,6 +20,12 @@ class AudioSettingsFragment : PreferenceFragmentCompat(), Preference.OnPreferenc
 
     private var dseePref: SwitchPreferenceCompat? = null
     private var windNrPref: SwitchPreferenceCompat? = null
+
+    private val settingsObserver = object : ContentObserver(Handler()) {
+        override fun onChange(selfChange: Boolean) {
+            updateSwitchStates()
+        }
+    }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.audio_settings, rootKey)
@@ -42,55 +50,46 @@ class AudioSettingsFragment : PreferenceFragmentCompat(), Preference.OnPreferenc
         val context = requireContext()
 
         when (preference.key) {
-            "audio_dsee" -> {
-                setDseeState(context, enabled)
-                return true
-            }
-            "audio_windnr" -> {
-                setWindNrState(context, enabled)
-                return true
-            }
+            "audio_dsee" -> setDseeState(context, enabled)
+            "audio_windnr" -> setWindNrState(context, enabled)
         }
-        return false
+        return true
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val resolver = requireContext().contentResolver
+        resolver.registerContentObserver(Settings.Global.getUriFor("audio_dsee"), true, settingsObserver)
+        resolver.registerContentObserver(Settings.Global.getUriFor("audio_windnr"), true, settingsObserver)
+        updateSwitchStates()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        requireContext().contentResolver.unregisterContentObserver(settingsObserver)
     }
 
     companion object {
         fun getDseeState(context: Context): Boolean {
-            return Settings.Secure.getInt(
-                context.contentResolver,
-                "audio_dsee",
-                0
-            ) == 1
+            return Settings.Global.getInt(context.contentResolver, "audio_dsee", 0) == 1
         }
 
         fun getWindNrState(context: Context): Boolean {
-            return Settings.Secure.getInt(
-                context.contentResolver,
-                "audio_windnr",
-                0
-            ) == 1
+            return Settings.Global.getInt(context.contentResolver, "audio_windnr", 0) == 1
         }
 
         private fun setDseeState(context: Context, enabled: Boolean) {
             context.getSystemService(AudioManager::class.java).apply {
                 setParameters("dsee_hx_state=${if (enabled) 1 else 0}")
             }
-            Settings.Secure.putInt(
-                context.contentResolver,
-                "audio_dsee",
-                if (enabled) 1 else 0
-            )
+            Settings.Global.putInt(context.contentResolver, "audio_dsee", if (enabled) 1 else 0)
         }
 
         private fun setWindNrState(context: Context, enabled: Boolean) {
             context.getSystemService(AudioManager::class.java).apply {
                 setParameters("wind_nr_enabled=${if (enabled) 1 else 0}")
             }
-            Settings.Secure.putInt(
-                context.contentResolver,
-                "audio_windnr",
-                if (enabled) 1 else 0
-            )
+            Settings.Global.putInt(context.contentResolver, "audio_windnr", if (enabled) 1 else 0)
         }
 
         fun applySettingsOnBoot(context: Context) {
