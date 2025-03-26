@@ -15,7 +15,7 @@
         android:key="device_charging_main_enable"
         android:title="@string/charger_bc_enable" />
 
-    <SwitchPreference
+    <SwitchPreferenceCompat
         android:key="device_charging_enable"
         android:title="@string/charger_hs_enable"
         android:summary="@string/charger_hs_summary"

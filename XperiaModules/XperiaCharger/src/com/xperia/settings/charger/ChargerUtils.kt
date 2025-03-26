@@ -15,16 +15,16 @@ import java.io.IOException
 class ChargerUtils(private val context: Context) {
 
     var chargingLimit: Int
-        get() = Settings.Secure.getInt(context.contentResolver, CHARGER_LIMIT_ENABLE, 100)
+        get() = Settings.Global.getInt(context.contentResolver, CHARGER_LIMIT_ENABLE, 100)
         set(value) {
-            Settings.Secure.putInt(context.contentResolver, CHARGER_LIMIT_ENABLE, value)
+            Settings.Global.putInt(context.contentResolver, CHARGER_LIMIT_ENABLE, value)
             Log.i(TAG, "Charging limit updated to: $value")
         }
 
     var isHSPCEnabled: Boolean
-        get() = Settings.Secure.getInt(context.contentResolver, CHARGER_HS_ENABLE, 0) > 0
+        get() = Settings.Global.getInt(context.contentResolver, CHARGER_HS_ENABLE, 0) > 0
         set(value) {
-            Settings.Secure.putInt(context.contentResolver, CHARGER_HS_ENABLE, if (value) 1 else 0)
+            Settings.Global.putInt(context.contentResolver, CHARGER_HS_ENABLE, if (value) 1 else 0)
             val nodeValue = if (value) "1" else "0"
             if (writeSysfs(chargingInterruptionNode, nodeValue)) {
                 Log.i(TAG, "HSPC toggled: $nodeValue")
@@ -32,9 +32,9 @@ class ChargerUtils(private val context: Context) {
         }
 
     var mainSwitch: Boolean
-        get() = Settings.Secure.getInt(context.contentResolver, CHARGER_MAIN_ENABLE, 0) > 0
+        get() = Settings.Global.getInt(context.contentResolver, CHARGER_MAIN_ENABLE, 0) > 0
         set(value) {
-            Settings.Secure.putInt(
+            Settings.Global.putInt(
                 context.contentResolver,
                 CHARGER_MAIN_ENABLE,
                 if (value) 1 else 0
@@ -106,9 +106,9 @@ class ChargerUtils(private val context: Context) {
     fun isChargingLimitEnabled(): Boolean = chargingLimit in 1..99
 
     fun applyOnBoot() {
-        chargingLimit = Settings.Secure.getInt(context.contentResolver, CHARGER_LIMIT_ENABLE, 100)
+        chargingLimit = Settings.Global.getInt(context.contentResolver, CHARGER_LIMIT_ENABLE, 100)
         // Disable HSPC Pref on Boot
-        Settings.Secure.putInt(context.contentResolver, CHARGER_HS_ENABLE, 0)
+        Settings.Global.putInt(context.contentResolver, CHARGER_HS_ENABLE, 0)
     }
 
     private fun writeSysfs(path: String, value: String): Boolean {
