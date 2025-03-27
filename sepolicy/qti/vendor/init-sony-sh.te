@@ -15,6 +15,3 @@ set_prop(init-sony-sh, vendor_radio_prop)
 
 # Allow init-sony-sh to set vendor_nfc_prop
 set_prop(init-sony-sh, vendor_nfc_prop)
-
-# Allow init-sony-sh to execute awk
-allow init-sony-sh vendor_file:file execute_no_trans;
