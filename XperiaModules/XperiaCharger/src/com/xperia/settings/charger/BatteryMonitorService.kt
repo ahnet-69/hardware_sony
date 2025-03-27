@@ -92,7 +92,7 @@ class BatteryMonitorService : Service() {
 
         fun startService(context: Context) {
             val serviceIntent = Intent(context, BatteryMonitorService::class.java)
-            context.startServiceAsUser(serviceIntent, UserHandle.CURRENT)
+            context.startServiceAsUser(serviceIntent, UserHandle.SYSTEM)
         }
     }
 }
