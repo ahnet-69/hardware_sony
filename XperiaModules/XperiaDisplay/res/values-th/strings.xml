@@ -25,7 +25,5 @@
     <string name="display_cm_header">ขอบเขตสีและคอนทราสต์</string>
     <string name="display_cm_enable">โหมดผู้สร้าง</string>
     <string name="display_cm_summary">มอบการสร้างวิสัยทัศน์ที่ผู้สร้างตั้งใจไว้อย่างสมจริงผ่านจอแสดงผลความละเอียดสูงและการประมวลผลภาพที่พัฒนาขึ้นมาเป็นพิเศษซึ่งเข้ากันได้กับขอบเขตสี BT.2020 และข้อกำหนดสี 10 บิตของ HDR</string>
-    <string name="display_xrp_enable">X-Reality Pro สำหรับอุปกรณ์มือ</string>
-    <string name="display_xrp_summary">โหมดการแสดงผลเพิ่มเติมที่ได้รับแรงบันดาลใจจาก Bravia Engine เพื่อปรับปรุงประสบการณ์การรับชมของคุณด้วยคอนทราสต์และสีที่ปรับให้เหมาะสม</string>
     <string name="display_settings_footer">แอปที่รองรับขอบเขตสีที่กว้างจะแสดงเป็นสีดั้งเดิมโดยอัตโนมัติ\n\n\nวิดีโอ HDR ในโหมดเต็มหน้าจอจะแสดงโดยอัตโนมัติด้วยโหมดผู้สร้าง</string>
 </resources>

@@ -25,7 +25,5 @@
     <string name="display_cm_header">Gama de Cores e Contraste</string>
     <string name="display_cm_enable">Modo de Criador</string>
     <string name="display_cm_summary">Forneça uma reprodução fiel da visão pretendida pelo criador através do ecrã de alta definição e do processamento de imagens especialmente desenvolvido compatível com a gama de cores do BT.2020 e a cor de 10 bits da especificação HDR.</string>
-    <string name="display_xrp_enable">X-Reality Pro para Celular</string>
-    <string name="display_xrp_summary">Um modo de exibição adicional inspirado no Bravia Engine para aprimorar sua experiência de visualização com contraste e cores otimizados.</string>
     <string name="display_settings_footer">As aplicações compatíveis com uma ampla gama de cores serão exibidos automaticamente nas cores originais.\n\n\nOs vídeos HDR no modo de ecrã inteiro serão exibidos automaticamente no Modo Criador.</string>
 </resources>

@@ -19,13 +19,6 @@
                           app:iconSpaceReserved="false"
                           app:title="@string/display_cm_enable"
                           app:summary="@string/display_cm_summary" />
-
-        <SwitchPreferenceCompat
-                          app:key="switchXRealityMode"
-                          app:iconSpaceReserved="false"
-                          app:title="@string/display_xrp_enable"
-                          app:summary="@string/display_xrp_summary" />
-
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference

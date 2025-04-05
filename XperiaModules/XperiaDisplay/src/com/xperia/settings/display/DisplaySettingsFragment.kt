@@ -27,15 +27,12 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 import com.xperia.settings.display.R
-import com.xperia.settings.display.XRealityModeUtils.Companion.XREALITY_MODE_ENABLE
 import com.xperia.settings.display.CreatorModeUtils.Companion.CREATOR_MODE_ENABLE
 
 const val CREATOR_MODE_KEY = "switchCreatorMode"
-const val XREALITY_MODE_KEY = "switchXRealityMode"
 
 class DisplaySettingsFragment : PreferenceFragmentCompat(), Preference.OnPreferenceChangeListener {
     private lateinit var creatorModeUtils: CreatorModeUtils
-    private lateinit var xrealityModeUtils: XRealityModeUtils
 
 companion object {
     private const val DOT_INDICATOR_SIZE = 12
@@ -56,35 +53,27 @@ companion object {
     private var mViewPagerImages: Array<View?>? = null
 
     private lateinit var creatorModePreference: SwitchPreferenceCompat
-    private lateinit var xRealityModePreference: SwitchPreferenceCompat
 
     private val settingsObserver = object : ContentObserver(Handler()) {
         override fun onChange(selfChange: Boolean) {
             creatorModePreference.isChecked = Settings.Global.getInt(requireContext().contentResolver, CREATOR_MODE_ENABLE, 0) != 0
-            xRealityModePreference.isChecked = Settings.Global.getInt(requireContext().contentResolver, XREALITY_MODE_ENABLE, 0) != 0
         }
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         addPreferencesFromResource(R.xml.display_settings)
         creatorModeUtils = CreatorModeUtils(requireContext())
-        xrealityModeUtils = XRealityModeUtils(requireContext())
 
         addViewPager()
 
         creatorModePreference = findPreference<SwitchPreferenceCompat>(CREATOR_MODE_KEY)!!
         creatorModePreference.isChecked = creatorModeUtils.isEnabled
         creatorModePreference.onPreferenceChangeListener = this
-
-        xRealityModePreference = findPreference<SwitchPreferenceCompat>(XREALITY_MODE_KEY)!!
-        xRealityModePreference.isChecked = xrealityModeUtils.isEnabled
-        xRealityModePreference.onPreferenceChangeListener = this
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
         when(preference.key) {
             CREATOR_MODE_KEY -> creatorModeUtils.setMode(newValue as Boolean)
-            XREALITY_MODE_KEY -> xrealityModeUtils.setMode(newValue as Boolean)
         }
         return true
     }
@@ -194,11 +183,6 @@ companion object {
         super.onResume()
         requireContext().contentResolver?.registerContentObserver(
             Settings.Global.getUriFor(CREATOR_MODE_ENABLE),
-            true,
-            settingsObserver
-        )
-        requireContext().contentResolver?.registerContentObserver(
-            Settings.Global.getUriFor(XREALITY_MODE_ENABLE),
             true,
             settingsObserver
         )

@@ -15,3 +15,7 @@ set_prop(vendor_init, vendor_sdm_prop)
 
 # SmartCharger
 allow vendor_init vendor_sysfs_battery_supply:file create;
+
+# Kcal
+allow vendor_init sysfs_kcal:dir search;
+allow vendor_init sysfs_kcal:file rw_file_perms;

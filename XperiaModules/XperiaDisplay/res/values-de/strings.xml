@@ -25,7 +25,5 @@
     <string name="display_cm_header">Farbraum und Kontrast</string>
     <string name="display_cm_enable">Creator Modus</string>
     <string name="display_cm_summary">Bieten Sie eine originalgetreue Wiedergabe der beabsichtigten Vision des Creators durch hochauflösende Anzeige und speziell entwickelte Bildverarbeitung, die mit dem BT.2020-Farbraum und der 10-Bit-Farbe der HDR-Spezifikation kompatibel ist.</string>
-    <string name="display_xrp_enable">X-Reality Pro für Mobilgeräte</string>
-    <string name="display_xrp_summary">Ein zusätzlicher, von der Bravia Engine inspirierter Anzeigemodus, der Ihr Seherlebnis mit optimiertem Kontrast und Farben verbessert.</string>
     <string name="display_settings_footer">Apps, die einen breiten Farbraum unterstützen, werden automatisch in ihren Originalfarben angezeigt.\n\n\nHDR-Videos im Vollbildmodus werden automatisch im Creator Modus angezeigt.</string>
 </resources>

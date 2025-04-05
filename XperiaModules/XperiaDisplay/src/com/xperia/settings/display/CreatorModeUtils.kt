@@ -22,7 +22,7 @@ import vendor.semc.hardware.display.V2_0.IDisplay
 import vendor.semc.hardware.display.V2_0.IDisplayCallback
 import vendor.semc.hardware.display.V2_0.PccMatrix
 
-import com.xperia.settings.display.server.DisplayTransformManager
+import com.xperia.settings.display.KcalUtils
 
 class CreatorModeUtils(private val context: Context) : IDisplayCallback.Stub() {
     private val colorDisplayManager: ColorDisplayManager =
@@ -30,15 +30,15 @@ class CreatorModeUtils(private val context: Context) : IDisplayCallback.Stub() {
                     ?: throw Exception("Display manager is NULL")
     private val semcDisplayService: IDisplay by lazy {
         val service = IDisplay.getService() ?: throw Exception("SEMC Display HIDL not found")
+
+        // Register itself as callback for HIDL
+        service.registerCallback(this)
+
         service.setup()
         service
     }
 
-    private val LEVEL_COLOR_MATRIX_CREATOR_MODE = 5690
-
-    private val dtm: DisplayTransformManager = DisplayTransformManager()
-
-    private val MAX = 255f
+    private val kcalUtils = KcalUtils()
 
     val isEnabled: Boolean
         get() = Settings.Global.getInt(context.contentResolver, CREATOR_MODE_ENABLE, 0) != 0
@@ -54,39 +54,18 @@ class CreatorModeUtils(private val context: Context) : IDisplayCallback.Stub() {
     fun initialize() {
         Log.i(TAG, "Creator Mode controller setup")
         try {
-            if (!isEnabled) {
-                semcDisplayService.set_sspp_color_mode(1)
-                colorDisplayManager.setColorMode(3)
-                semcDisplayService.set_color_mode(1)
-            }
-
-            semcDisplayService.registerCallback(this)
-    
-            if (isEnabled) {
-                setMode(true)
-            }
+            setMode(isEnabled)
         } catch (e: Exception) {
         }
     }
 
     override fun onWhiteBalanceMatrixChanged(matrix: PccMatrix) {
-        val r = matrix.red
-        val g = matrix.green
-        val b = matrix.blue
+        // Convert float values (0.0-1.0) to 0-255 integers
+        val r = (matrix.red * 255).toInt().coerceIn(0, 255)
+        val g = (matrix.green * 255).toInt().coerceIn(0, 255)
+        val b = (matrix.blue * 255).toInt().coerceIn(0, 255)
 
-        try {
-            dtm.setColorMatrix(LEVEL_COLOR_MATRIX_CREATOR_MODE,
-                floatArrayOf(
-                        r,  0f, 0f, 0f,
-                        0f, g,  0f, 0f,
-                        0f, 0f, b,  0f,
-                        0f, 0f, 0f, 1f
-                    ))
-        } catch (e: Exception) {
-            Log.e(TAG, "Could not apply setColorMatrix", e)
-            return;
-        }
-
+        kcalUtils.applyValues(r, g, b)
         updateConfiguration()
 
         Log.i(TAG, "New white balance: ${r}, ${g}, ${b}")

@@ -18,14 +18,12 @@
 <resources>
     <!-- App Name -->
     <string name="app_name" translatable="true">エクスペリアディスプレイ</string>
-	  
+
     <!-- Display Settings -->
     <string name="display_settings_title">画質設定</string>
     <string name="display_setting_summary">クリエーターモードで画質を調整する</string>
     <string name="display_cm_header">色域とコントラスト</string>
     <string name="display_cm_enable">クリエーターモード</string>
     <string name="display_cm_summary">BT.2020カラーガムットとHDR仕様の10ビットカラーに対応した、高精細ディスプレイと特別に開発された画像処理による、創造者の意図したビジョンの忠実な再現を提供します。</string>
-    <string name="display_xrp_enable">モバイル向けX-Reality Pro</string>
-    <string name="display_xrp_summary">最適化されたコントラストと色彩で視聴体験を向上させる、Bravia Engine にインスパイアされた追加の表示モード。</string>
     <string name="display_settings_footer">広色域をサポートするアプリは、自動的に元の色で表示されます。\n\n\n全画面モードの HDR ビデオは、クリエイター モードで自動的に表示されます。</string>
 </resources>

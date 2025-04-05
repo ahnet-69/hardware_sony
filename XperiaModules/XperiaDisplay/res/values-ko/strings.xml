@@ -25,7 +25,5 @@
     <string name="display_cm_enable">크리에이터 모드</string>
     <string name="display_cm_header">색 영역 및 대비</string>
     <string name="display_cm_summary">BT.2020 색영역 및 HDR 사양의 10비트 컬러와 호환되는 고해상도 디스플레이 및 특별히 개발된 이미지 처리를 통해 창조자의 의도한 비전을 충실히 재현합니다.</string>
-    <string name="display_xrp_enable">모바일용 X-Reality Pro</string>
-    <string name="display_xrp_summary">Bravia Engine 에서 영감을 받은 추가 디스플레이 모드로 최적화된 대비와 색상으로 시청 경험을 향상할 수 있습니다.</string>
     <string name="display_settings_footer">넓은 색 영역을 지원하는 앱은 자동으로 원래 색상으로 표시됩니다.\n\n\n전체 화면 모드의 HDR 동영상은 크리에이터 모드를 통해 자동으로 표시됩니다.</string>
 </resources>

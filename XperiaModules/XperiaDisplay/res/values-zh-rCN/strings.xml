@@ -24,7 +24,5 @@
     <string name="display_cm_header">色域和对比度</string>
     <string name="display_cm_enable">大师模式</string>
     <string name="display_cm_summary">通过高清显示和专门开发的兼容 BT.2020 色域和 HDR 规范 10 位颜色的图像处理，忠实再现创作者的预期视觉。</string>
-    <string name="display_xrp_enable">移动版 X-Reality Pro</string>
-    <string name="display_xrp_summary">一个额外的 Bravia Engine 灵感显示模式，以优化对比度和颜色来增强您的观看体验。"</string> 
     <string name="display_settings_footer">支持广色域的应用将自动以其原始颜色显示。\n\n\n全屏模式下的 HDR 视频将自动以大师模式显示。</string>
 </resources>

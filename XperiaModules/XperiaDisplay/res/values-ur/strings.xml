@@ -25,7 +25,5 @@
     <string name="display_cm_header">کلر گامٹ اور کنٹراسٹ</string>
     <string name="display_cm_enable">تخلیق کار وضع</string>
     <string name="display_cm_summary">ہائی ڈیفینیشن ڈسپلے اور BT.2020 کلر گامٹ اور HDR تصریح کے 10 بٹ کلر کے ساتھ ہم آہنگ خصوصی طور پر تیار کردہ امیج پروسیسنگ کے ذریعے تخلیق کار کے مطلوبہ وژن کا ایک وفادار پنروتپادن فراہم کریں۔</string>
-    <string name="display_xrp_enable">موبائل کے لیے ایکس-ریئلٹی پرو</string>
-    <string name="display_xrp_summary">بہتر کنٹراسٹ اور رنگوں کے ساتھ آپ کے دیکھنے کے تجربے کو بڑھانے کے لیے ایک اضافی Bravia انجن سے متاثر ڈسپلے موڈ۔</string>
     <string name="display_settings_footer">وہ ایپس جو وسیع کلر گامٹ کو سپورٹ کرتی ہیں خود بخود ان کے اصل رنگوں میں دکھائے جائیں گے۔\n\n\nپورے اسکرین موڈ میں HDR ویڈیوز تخلیق کار وضع کے ساتھ خود بخود ظاہر ہوں گی۔</string>
 </resources>

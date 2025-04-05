@@ -25,7 +25,5 @@
     <string name="display_cm_header">Färgomfång och Kontrast</string>
     <string name="display_cm_enable">Skaparläge</string>
     <string name="display_cm_summary">Ge en trogen återgivning av skaparens avsedda vision genom högupplöst display och specialutvecklad bildbehandling som är kompatibel med BT.2020-färgomfånget och 10-bitars färg enligt HDR-specifikationen.</string>
-    <string name="display_xrp_enable">X-Reality Pro för Mobila Enheter</string>
-    <string name="display_xrp_summary">Ett extra Bravia Engine-inspirerat visningsläge för att förbättra din tittarupplevelse med optimerad kontrast och färger.</string>
     <string name="display_settings_footer">Appar som stöder ett brett färgomfång kommer automatiskt att visas i sina ursprungliga färger.\n\n\nHDR-videor i helskärmsläge kommer automatiskt att visas med Skaparläge.</string>
 </resources>

@@ -25,7 +25,5 @@
     <string name="display_cm_header">Kleurengamma en Contrast</string>
     <string name="display_cm_enable">Creator Modus</string>
     <string name="display_cm_summary">Zorg voor een getrouwe reproductie van de beoogde visie van de maker via high-definition weergave en speciaal ontwikkelde beeldverwerking die compatibel is met het BT.2020-kleurengamma en 10-bit kleur van HDR-specificatie.</string>
-    <string name="display_xrp_enable">X-Reality Pro voor Mobiel</string>
-    <string name="display_xrp_summary">Een extra op Bravia Engine geïnspireerde weergavemodus om uw kijkervaring te verbeteren met geoptimaliseerd contrast en kleuren.</string>
     <string name="display_settings_footer">Apps die een breed kleurengamma ondersteunen, worden automatisch in hun originele kleuren weergegeven.\n\n\nHDR-videos op volledig scherm worden automatisch weergegeven in de Creator-modus.</string>
 </resources>
