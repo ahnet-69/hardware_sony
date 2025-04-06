@@ -26,4 +26,8 @@
     <string name="display_cm_header">색 영역 및 대비</string>
     <string name="display_cm_summary">BT.2020 색영역 및 HDR 사양의 10비트 컬러와 호환되는 고해상도 디스플레이 및 특별히 개발된 이미지 처리를 통해 창조자의 의도한 비전을 충실히 재현합니다.</string>
     <string name="display_settings_footer">넓은 색 영역을 지원하는 앱은 자동으로 원래 색상으로 표시됩니다.\n\n\n전체 화면 모드의 HDR 동영상은 크리에이터 모드를 통해 자동으로 표시됩니다.</string>
+    <string name="white_balance_profile_title">화이트 밸런스</string>
+    <string name="motion_blur_reduction_summary">움직이는 물체의 선명한 이미지를 표시하며 모션 블러가 줄어듭니다</string>
+    <string name="motion_blur_reduction_title">모션 블러 감소</string>
+
 </resources>

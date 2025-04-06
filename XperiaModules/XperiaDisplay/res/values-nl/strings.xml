@@ -26,4 +26,8 @@
     <string name="display_cm_enable">Creator Modus</string>
     <string name="display_cm_summary">Zorg voor een getrouwe reproductie van de beoogde visie van de maker via high-definition weergave en speciaal ontwikkelde beeldverwerking die compatibel is met het BT.2020-kleurengamma en 10-bit kleur van HDR-specificatie.</string>
     <string name="display_settings_footer">Apps die een breed kleurengamma ondersteunen, worden automatisch in hun originele kleuren weergegeven.\n\n\nHDR-videos op volledig scherm worden automatisch weergegeven in de Creator-modus.</string>
+    <string name="white_balance_profile_title">Witbalans</string>
+    <string name="motion_blur_reduction_summary">Toont een helder beeld van bewegende objecten met verminderde bewegingsonscherpte</string>
+    <string name="motion_blur_reduction_title">Vermindering van bewegingsonscherpte</string>
+
 </resources>

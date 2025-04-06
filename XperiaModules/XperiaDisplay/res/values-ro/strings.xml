@@ -26,4 +26,8 @@
     <string name="display_cm_enable">Mod Creator</string>
     <string name="display_cm_summary">Oferă o reproducere fidelă a viziunii intenționate a creatorului prin afișaj de înaltă definiție și procesare a imaginii special dezvoltată, care este compatibilă cu gama de culori BT.2020 și culoarea pe 10 biți a specificației HDR.</string>
     <string name="display_settings_footer">Aplicațiile care suportă o gamă largă de culori vor fi afișate automat în culorile lor originale.\n\n\nVideoclipurile HDR în modul ecran complet vor fi afișate automat în Mod Creator.</string>
+    <string name="white_balance_profile_title">Echilibru de alb</string>
+    <string name="motion_blur_reduction_summary">Afișează imagini clare ale obiectelor în mișcare, cu estompare redusă a mișcării</string>
+    <string name="motion_blur_reduction_title">Reducerea estomperii mișcării</string>
+
 </resources>

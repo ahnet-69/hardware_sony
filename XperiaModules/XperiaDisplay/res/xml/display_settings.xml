@@ -11,14 +11,31 @@
         android:selectable="false" />
 
     <PreferenceCategory
+        android:key="display_cm_header_category"
         app:iconSpaceReserved="false"
         app:title="@string/display_cm_header">
 
         <SwitchPreferenceCompat
-                          app:key="switchCreatorMode"
-                          app:iconSpaceReserved="false"
-                          app:title="@string/display_cm_enable"
-                          app:summary="@string/display_cm_summary" />
+            app:key="switchCreatorMode"
+            app:iconSpaceReserved="false"
+            app:title="@string/display_cm_enable"
+            app:summary="@string/display_cm_summary" />
+
+        <ListPreference
+            android:icon="@drawable/ic_preset"
+            android:enabled="false"
+            android:entries="@array/white_balance_profile_entry"
+            android:title="@string/white_balance_profile_title"
+            android:key="white_balance_switch"
+            android:summary="%s"
+            android:entryValues="@array/white_balance_profile_values"/>
+
+        <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            app:key="motion_blur_reduction"
+            app:summary="@string/motion_blur_reduction_summary"
+            app:title="@string/motion_blur_reduction_title"/>
+
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference

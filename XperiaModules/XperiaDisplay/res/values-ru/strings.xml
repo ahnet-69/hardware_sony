@@ -26,4 +26,8 @@
     <string name="display_cm_enable">Режим автора</string>
     <string name="display_cm_summary">Обеспечьте точное воспроизведение замысла создателя с помощью дисплея высокой четкости и специально разработанной обработки изображений, совместимой с цветовой гаммой BT.2020 и 10-битным цветом спецификации HDR.</string>
     <string name="display_settings_footer">Приложения, поддерживающие широкую цветовую гамму, будут автоматически отображаться в исходных цветах.\n\n\nHDR-видео в полноэкранном режиме будет автоматически отображаться в режиме автора.</string>
+    <string name="white_balance_profile_title">Баланс белого</string>
+    <string name="motion_blur_reduction_summary">Отображает чёткое изображение движущихся объектов с уменьшенным размытием движения</string>
+    <string name="motion_blur_reduction_title">Снижение размытия в движении</string>
+
 </resources>

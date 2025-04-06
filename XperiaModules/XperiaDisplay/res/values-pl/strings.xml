@@ -26,4 +26,8 @@
     <string name="display_cm_enable">Tryb Twórcy</string>
     <string name="display_cm_summary">Zapewnia wierne odwzorowanie zamierzonej wizji twórcy dzięki wyświetlaczowi o wysokiej rozdzielczości i specjalnie opracowanemu przetwarzaniu obrazu zgodnemu z gamą kolorów BT.2020 i 10-bitową specyfikacją HDR.</string>
     <string name="display_settings_footer">Aplikacje obsługujące szeroką gamę kolorów będą automatycznie wyświetlane w oryginalnych kolorach.\n\n\nFilmy HDR w trybie pełnoekranowym będą automatycznie wyświetlane w trybie twórcy.</string>
+    <string name="white_balance_profile_title">Balans bieli</string>
+    <string name="motion_blur_reduction_summary">Wyświetla wyraźny obraz poruszających się obiektów z mniejszym rozmyciem ruchu</string>
+    <string name="motion_blur_reduction_title">Redukcja rozmycia ruchu</string>
+
 </resources>

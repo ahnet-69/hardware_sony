@@ -11,12 +11,10 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 
-import com.xperia.settings.display.CreatorModeUtils
-
 class BootCompletedReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         Log.d(TAG, "Starting")
-        CreatorModeUtils(context).initialize()
+        SemcDisplayUtils(context).initialize()
     }
 
     companion object {

@@ -26,4 +26,8 @@
     <string name="display_cm_enable">クリエーターモード</string>
     <string name="display_cm_summary">BT.2020カラーガムットとHDR仕様の10ビットカラーに対応した、高精細ディスプレイと特別に開発された画像処理による、創造者の意図したビジョンの忠実な再現を提供します。</string>
     <string name="display_settings_footer">広色域をサポートするアプリは、自動的に元の色で表示されます。\n\n\n全画面モードの HDR ビデオは、クリエイター モードで自動的に表示されます。</string>
+    <string name="white_balance_profile_title">ホワイトバランス</string>
+    <string name="motion_blur_reduction_summary">動いている物体の鮮明な画像を表示し、モーションブラーを低減します。</string>
+    <string name="motion_blur_reduction_title">モーションブラー低減</string>
+
 </resources>
