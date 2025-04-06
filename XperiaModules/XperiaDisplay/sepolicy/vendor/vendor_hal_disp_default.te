@@ -1,0 +1,1 @@
+allow vendor_hal_disp_default system_app:binder call;

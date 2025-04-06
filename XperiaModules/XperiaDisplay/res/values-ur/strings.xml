@@ -26,4 +26,8 @@
     <string name="display_cm_enable">تخلیق کار وضع</string>
     <string name="display_cm_summary">ہائی ڈیفینیشن ڈسپلے اور BT.2020 کلر گامٹ اور HDR تصریح کے 10 بٹ کلر کے ساتھ ہم آہنگ خصوصی طور پر تیار کردہ امیج پروسیسنگ کے ذریعے تخلیق کار کے مطلوبہ وژن کا ایک وفادار پنروتپادن فراہم کریں۔</string>
     <string name="display_settings_footer">وہ ایپس جو وسیع کلر گامٹ کو سپورٹ کرتی ہیں خود بخود ان کے اصل رنگوں میں دکھائے جائیں گے۔\n\n\nپورے اسکرین موڈ میں HDR ویڈیوز تخلیق کار وضع کے ساتھ خود بخود ظاہر ہوں گی۔</string>
+    <string name="white_balance_profile_title">وائٹ بیلنس</string>
+    <string name="motion_blur_reduction_summary">موشن بلر کم ہونے کے ساتھ متحرک اشیاء کی واضح تصویر دکھاتا ہے</string>
+    <string name="motion_blur_reduction_title">موشن بلر میں کمی</string>
+
 </resources>

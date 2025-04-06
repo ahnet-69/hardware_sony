@@ -26,4 +26,8 @@
     <string name="display_cm_enable">Modo Creador</string>
     <string name="display_cm_summary">Ofrece una reproducción fiel de la visión original del creador mediante una pantalla de alta definición y procesamiento de imágenes especialmente desarrollado compatible con la gama de colores BT.2020 y el color de 10 bits de la especificación HDR.</string>
     <string name="display_settings_footer">Las aplicaciones que admiten una amplia gama de colores se mostrarán automáticamente en sus colores originales.\n\nLos videos HDR en modo de pantalla completa se mostrarán automáticamente con el Modo Creador</string>
+    <string name="white_balance_profile_title">Balance de blancos</string>
+    <string name="motion_blur_reduction_summary">Muestra una imagen clara de objetos en movimiento con menor desenfoque de movimiento</string>
+    <string name="motion_blur_reduction_title">Reducción del desenfoque de movimiento</string>
+
 </resources>

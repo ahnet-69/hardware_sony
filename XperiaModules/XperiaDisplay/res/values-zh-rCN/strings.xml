@@ -25,4 +25,8 @@
     <string name="display_cm_enable">大师模式</string>
     <string name="display_cm_summary">通过高清显示和专门开发的兼容 BT.2020 色域和 HDR 规范 10 位颜色的图像处理，忠实再现创作者的预期视觉。</string>
     <string name="display_settings_footer">支持广色域的应用将自动以其原始颜色显示。\n\n\n全屏模式下的 HDR 视频将自动以大师模式显示。</string>
+    <string name="white_balance_profile_title">白平衡</string>
+    <string name="motion_blur_reduction_summary">显示运动物体的清晰图像，并减少运动模糊</string>
+    <string name="motion_blur_reduction_title">运动模糊减少</string>
+
 </resources>

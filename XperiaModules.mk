@@ -41,6 +41,7 @@ endif
 
 # Display Settings
 ifeq ($(TARGET_SUPPORTS_CREATOR_MODE),true)
+include hardware/sony/XperiaModules/XperiaDisplay/sepolicy/SEPolicy.mk
 	PRODUCT_PACKAGES += XperiaDisplay
 endif
 

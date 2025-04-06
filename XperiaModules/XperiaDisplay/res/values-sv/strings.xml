@@ -19,11 +19,15 @@
     <!-- App Name -->
     <string name="app_name" translatable="true">Xperia Skärm</string>
 
-    <!-- Display Settings --> 
+    <!-- Display Settings -->
     <string name="display_settings_title">Inställningar för Bildkvalitet</string>
     <string name="display_setting_summary">Justera bildkvaliteten med skaparläget</string>
     <string name="display_cm_header">Färgomfång och Kontrast</string>
     <string name="display_cm_enable">Skaparläge</string>
     <string name="display_cm_summary">Ge en trogen återgivning av skaparens avsedda vision genom högupplöst display och specialutvecklad bildbehandling som är kompatibel med BT.2020-färgomfånget och 10-bitars färg enligt HDR-specifikationen.</string>
     <string name="display_settings_footer">Appar som stöder ett brett färgomfång kommer automatiskt att visas i sina ursprungliga färger.\n\n\nHDR-videor i helskärmsläge kommer automatiskt att visas med Skaparläge.</string>
+    <string name="white_balance_profile_title">Vitbalans</string>
+    <string name="motion_blur_reduction_summary">Visar en tydlig bild av rörliga objekt med reducerad rörelseoskärpa</string>
+    <string name="motion_blur_reduction_title">Minskad rörelseoskärpa</string>
+
 </resources>
