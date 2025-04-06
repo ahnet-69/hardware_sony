@@ -35,8 +35,7 @@ endif
 
 # Battery Care
 ifeq ($(TARGET_SUPPORTS_BATTERY_CARE),true)
-        BOARD_VENDOR_SEPOLICY_DIRS += hardware/sony/XperiaModules/XperiaCharger/sepolicy/vendor
-
+include hardware/sony/XperiaModules/XperiaCharger/sepolicy/SEPolicy.mk
 	PRODUCT_PACKAGES += XperiaCharger
 endif
 
