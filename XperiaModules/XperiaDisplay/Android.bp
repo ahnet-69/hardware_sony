@@ -19,6 +19,7 @@ android_app {
         "vendor.semc.hardware.display-V2.0-java",
         "vendor.semc.hardware.display-V2.1-java",
         "vendor.semc.hardware.display-V2.2-java",
+        "vendor.semc.hardware.extlight-V1-java",
     ],
 
     optimize: {

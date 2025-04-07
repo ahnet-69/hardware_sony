@@ -16,6 +16,7 @@ import vendor.semc.hardware.display.V2_0.IDisplay
 import vendor.semc.hardware.display.V2_0.IDisplayCallback
 import vendor.semc.hardware.display.V2_0.PccMatrix
 import vendor.semc.hardware.display.V2_2.IFramerateController
+import vendor.semc.hardware.extlight.IExtLight
 
 class SemcDisplayUtils(private val context: Context) : IDisplayCallback.Stub() {
 
@@ -36,6 +37,7 @@ class SemcDisplayUtils(private val context: Context) : IDisplayCallback.Stub() {
 
         const val CREATOR_MODE_ENABLE = "cm_enable"
         const val MOTION_BLUR_REDUCTION_ENABLE = "motion_blur_reduction_enable"
+        const val VIDEO_IMAGE_ENHANCE_ENABLE = "video_image_enhance_enable"
         const val WHITE_BALANCE_PROF = "white_balance_profile"
     }
 
@@ -55,6 +57,12 @@ class SemcDisplayUtils(private val context: Context) : IDisplayCallback.Stub() {
             ?: throw Exception("SEMC FramerateController HIDL not found")
     }
 
+    private val extLightService by lazy {
+        IExtLight.Stub.asInterface(
+            ServiceManager.waitForDeclaredService(IExtLight.DESCRIPTOR + "/default")
+        ) ?: throw Exception("SEMC ExtLight AIDL not found")
+    }
+
     private val kcalUtils = KcalUtils()
 
     fun isCMEnabled(): Boolean =
@@ -62,6 +70,9 @@ class SemcDisplayUtils(private val context: Context) : IDisplayCallback.Stub() {
 
     fun getWbProfile(): Int =
         Settings.Global.getInt(context.contentResolver, WHITE_BALANCE_PROF, 4)
+
+    fun isVideoImageEnhanceEnabled(): Boolean =
+        Settings.Global.getInt(context.contentResolver, VIDEO_IMAGE_ENHANCE_ENABLE , 0) != 0
 
     fun isMotionBlurReductionEnabled(): Boolean =
         Settings.Global.getInt(context.contentResolver, MOTION_BLUR_REDUCTION_ENABLE, 0) != 0
@@ -75,6 +86,17 @@ class SemcDisplayUtils(private val context: Context) : IDisplayCallback.Stub() {
         if(!enable) setWhiteBalance(getWbProfile())
 
         Settings.Global.putInt(context.contentResolver, CREATOR_MODE_ENABLE, if (enable) 1 else 0)
+    }
+
+    fun getVideoImageEnhanceEnabled(): Boolean = isVideoImageEnhanceEnabled()
+
+    fun setVideoEnhanceEnabled(enable: Boolean) {
+        extLightService.setExtHdr(if (enable) 1 else 0)
+        Settings.Global.putInt(
+            context.contentResolver,
+            VIDEO_IMAGE_ENHANCE_ENABLE ,
+            if (enable) 1 else 0
+        )
     }
 
     fun setMotionBlurReductionEnabled(enable: Boolean) {
@@ -92,6 +114,9 @@ class SemcDisplayUtils(private val context: Context) : IDisplayCallback.Stub() {
             setCMMode(true)
         } else {
             setWhiteBalance(getWbProfile())
+        }
+        if (isVideoImageEnhanceEnabled()) {
+            setVideoEnhanceEnabled(true)
         }
         if (isMotionBlurReductionEnabled()) {
             setMotionBlurReductionEnabled(true)

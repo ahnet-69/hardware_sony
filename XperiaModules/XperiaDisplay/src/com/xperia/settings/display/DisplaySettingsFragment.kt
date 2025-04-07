@@ -29,6 +29,7 @@ import kotlin.collections.ArrayList
 import com.xperia.settings.display.R
 import com.xperia.settings.display.SemcDisplayUtils.Companion.CREATOR_MODE_ENABLE
 import com.xperia.settings.display.SemcDisplayUtils.Companion.MOTION_BLUR_REDUCTION_ENABLE
+import com.xperia.settings.display.SemcDisplayUtils.Companion.VIDEO_IMAGE_ENHANCE_ENABLE
 import com.xperia.settings.display.SemcDisplayUtils.Companion.WHITE_BALANCE_PROF
 
 class DisplaySettingsFragment : PreferenceFragmentCompat(), Preference.OnPreferenceChangeListener {
@@ -40,6 +41,7 @@ class DisplaySettingsFragment : PreferenceFragmentCompat(), Preference.OnPrefere
 
         const val CREATOR_MODE_KEY = "switchCreatorMode"
         const val WHITE_BALANCE_KEY = "white_balance_switch"
+        const val VIDEO_ENHANCE_KEY = "video_image_enhance"
         const val MOTION_BLUR_KEY = "motion_blur_reduction"
     }
 
@@ -58,12 +60,15 @@ class DisplaySettingsFragment : PreferenceFragmentCompat(), Preference.OnPrefere
     private var mViewPagerImages: Array<View?>? = null
 
     private lateinit var creatorModePreference: SwitchPreferenceCompat
+    private lateinit var videoEnhancePreference: SwitchPreferenceCompat
     private lateinit var motionBlurPreference: SwitchPreferenceCompat
     private lateinit var whiteBalancePreference: ListPreference
 
     private val settingsObserver = object : ContentObserver(Handler()) {
         override fun onChange(selfChange: Boolean) {
             creatorModePreference.isChecked = semcDisplayUtils.isCMEnabled()
+
+            videoEnhancePreference.isChecked = semcDisplayUtils.isVideoImageEnhanceEnabled()
 
             motionBlurPreference.isChecked = semcDisplayUtils.isMotionBlurReductionEnabled()
 
@@ -87,6 +92,11 @@ class DisplaySettingsFragment : PreferenceFragmentCompat(), Preference.OnPrefere
         whiteBalancePreference.setValueIndex(semcDisplayUtils.getWbProfile())
         whiteBalancePreference.onPreferenceChangeListener = this
 
+
+        videoEnhancePreference = findPreference<SwitchPreferenceCompat>(VIDEO_ENHANCE_KEY)!!
+        videoEnhancePreference.isChecked = semcDisplayUtils.isVideoImageEnhanceEnabled()
+        videoEnhancePreference.onPreferenceChangeListener = this
+
         motionBlurPreference = findPreference<SwitchPreferenceCompat>(MOTION_BLUR_KEY)!!
         motionBlurPreference.isChecked = semcDisplayUtils.isMotionBlurReductionEnabled()
         motionBlurPreference.onPreferenceChangeListener = this
@@ -102,6 +112,9 @@ class DisplaySettingsFragment : PreferenceFragmentCompat(), Preference.OnPrefere
             }
             "switchCreatorMode" -> {
                 semcDisplayUtils.setCMMode(newValue as Boolean)
+            }
+            "video_image_enhance" -> {
+                semcDisplayUtils.setVideoEnhanceEnabled(newValue as Boolean)
             }
         }
         return true
@@ -217,6 +230,11 @@ class DisplaySettingsFragment : PreferenceFragmentCompat(), Preference.OnPrefere
         )
         requireContext().contentResolver?.registerContentObserver(
             Settings.Global.getUriFor(MOTION_BLUR_REDUCTION_ENABLE),
+            true,
+            settingsObserver
+        )
+        requireContext().contentResolver?.registerContentObserver(
+            Settings.Global.getUriFor(VIDEO_IMAGE_ENHANCE_ENABLE),
             true,
             settingsObserver
         )

@@ -38,4 +38,8 @@
 
     <!-- Creator Mode Next Image Button -->
     <string name="creator_mode_next" translatable="false">Next</string>
+
+    <string name="video_enhance_summary">Enhance the video quality</string>
+    <string name="video_enhance_title">Video image enhancement</string>
+
 </resources>

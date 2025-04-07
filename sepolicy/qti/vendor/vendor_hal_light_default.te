@@ -1,0 +1,11 @@
+type vendor_hal_light_default, domain;
+hal_server_domain(vendor_hal_light_default, vendor_hal_light)
+
+type vendor_hal_light_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_hal_light_default)
+
+binder_use(vendor_hal_light_default)
+
+allow vendor_hal_light_default sysfs_leds:lnk_file read;
+allow vendor_hal_light_default sysfs_leds:file rw_file_perms;
+allow vendor_hal_light_default sysfs_leds:dir r_file_perms;
