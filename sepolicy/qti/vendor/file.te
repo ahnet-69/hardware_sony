@@ -16,7 +16,6 @@ type sysfs_discard_max_bytes, fs_type, sysfs_type;
 type sysfs_dp, fs_type, sysfs_type;
 type sysfs_haptic_activate, fs_type, sysfs_type;
 type sysfs_kcal, sysfs_type, fs_type;
-type sysfs_kprofiles, sysfs_type, fs_type;
 type sysfs_sects, fs_type, sysfs_type;
 type sysfs_tof_rgbcir, fs_type, sysfs_type;
 type sysfs_torch_brightness, fs_type, sysfs_type;
