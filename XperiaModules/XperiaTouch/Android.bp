@@ -9,7 +9,9 @@
 android_app {
     name: "XperiaTouch",
 
-    srcs: ["src/**/*.java"],
+    srcs: [
+        "src/**/*.kt",
+    ],
     certificate: "platform",
     platform_apis: true,
     system_ext_specific: true,

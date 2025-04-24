@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2024 XperiaLabs Project
+     Copyright (C) 2025 XperiaLabs Project
 
      SPDX-License-Identifier: Apache-2.0
 -->
@@ -19,8 +19,6 @@
         android:allowBackup="true"
         android:persistent="true"
         android:directBootAware="true">
-        <!-- TODO after package rename in U:
-        android:defaultToDeviceProtectedStorage="true" -->
 
         <receiver
             android:name=".BootCompletedReceiver"
@@ -31,7 +29,7 @@
         </receiver>
 
         <service
-            android:name=".polling.HighTouchPollingService"
+            android:name=".HighTouchPollingService"
             android:permission="HighTouchPollingService">
         </service>
 
