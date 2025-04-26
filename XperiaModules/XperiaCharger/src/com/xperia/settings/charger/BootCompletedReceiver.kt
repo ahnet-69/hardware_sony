@@ -12,14 +12,11 @@ import android.content.Intent
 import android.util.Log
 
 import com.xperia.settings.charger.BatteryMonitorService
-import com.xperia.settings.charger.ChargerUtils
-import com.xperia.settings.charger.ChargerUtils.ChargerUtilsHolder
 
 class BootCompletedReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         Log.d(TAG, "Starting")
-        ChargerUtilsHolder.init(context)
-        ChargerUtilsHolder.getInstance().applyOnBoot()
+        ChargerUtils(context).applyOnBoot()
 
         BatteryMonitorService.startService(context)
     }

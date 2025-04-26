@@ -16,8 +16,6 @@ import android.os.UserHandle
 import android.util.Log
 import android.widget.Toast
 
-import com.xperia.settings.charger.ChargerUtils.ChargerUtilsHolder
-
 class BatteryMonitorService : Service() {
 
     private lateinit var chargerUtils: ChargerUtils
@@ -63,8 +61,7 @@ class BatteryMonitorService : Service() {
 
     override fun onCreate() {
         super.onCreate()
-        ChargerUtilsHolder.init(this)
-        chargerUtils = ChargerUtilsHolder.getInstance()
+        chargerUtils = ChargerUtils(this)
 
         val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
         registerReceiver(batteryReceiver, filter)

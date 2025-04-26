@@ -143,19 +143,4 @@ class ChargerUtils(private val context: Context) {
             "/sys/class/power_supply/battery_ext/smart_charging_interruption"
         )
     }
-
-    object ChargerUtilsHolder {
-        private var instance: ChargerUtils? = null
-
-        fun init(context: Context) {
-            if (instance == null) {
-                instance = ChargerUtils(context.applicationContext)
-            }
-        }
-
-        fun getInstance(): ChargerUtils {
-            return instance
-                ?: throw IllegalStateException("ChargerUtilsHolder not initialized. Call init(context) first.")
-        }
-    }
 }

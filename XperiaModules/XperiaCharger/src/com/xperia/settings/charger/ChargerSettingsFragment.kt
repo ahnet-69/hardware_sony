@@ -25,7 +25,6 @@ import com.android.settingslib.widget.MainSwitchPreference
 import androidx.viewpager.widget.ViewPager
 import com.xperia.settings.charger.R
 import com.xperia.settings.charger.widgets.CustomSeekBarPreference
-import com.xperia.settings.charger.ChargerUtils.ChargerUtilsHolder
 import com.xperia.settings.charger.ChargerUtils.Companion.CHARGER_MAIN_ENABLE
 import com.xperia.settings.charger.ChargerUtils.Companion.CHARGER_LIMIT_ENABLE
 import com.xperia.settings.charger.ChargerUtils.Companion.CHARGER_HS_ENABLE
@@ -50,8 +49,7 @@ class ChargerSettingsFragment : PreferenceFragmentCompat(),
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.charger_settings, rootKey)
 
-        ChargerUtilsHolder.init(requireContext())
-        chargerUtils = ChargerUtilsHolder.getInstance()
+        chargerUtils = ChargerUtils(requireContext())
 
         mSwitch = findPreference<MainSwitchPreference>(CHARGER_SETTING_ENABLE_KEY)?.apply {
             isChecked = chargerUtils.mainSwitch

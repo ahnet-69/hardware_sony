@@ -23,12 +23,14 @@ import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import android.widget.Toast
 import com.xperia.settings.charger.R
-import com.xperia.settings.charger.ChargerUtils.ChargerUtilsHolder
 
 class ChargerTileService : TileService() {
-    private val chargerUtil by lazy {
-        ChargerUtilsHolder.init(applicationContext)
-        ChargerUtilsHolder.getInstance()
+
+    private lateinit var chargerUtils: ChargerUtils
+
+    override fun onCreate() {
+        super.onCreate()
+        chargerUtils = ChargerUtils(this)
     }
 
     override fun onStartListening() {
@@ -47,22 +49,23 @@ class ChargerTileService : TileService() {
             return
         }
 
-        if (!chargerUtil.mainSwitch) {
+        if (!chargerUtils.mainSwitch) {
             Toast.makeText(this, R.string.charger_hs_toast, Toast.LENGTH_SHORT).show()
             updateTileState()
             return
         }
 
-        chargerUtil.isHSPCEnabled = !chargerUtil.isHSPCEnabled
+        chargerUtils.isHSPCEnabled = !chargerUtils.isHSPCEnabled
         updateTileState()
     }
 
     private fun updateTileState() {
-        qsTile.state = if (chargerUtil.mainSwitch) {
-            if (chargerUtil.isHSPCEnabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
+        qsTile.state = if (chargerUtils.mainSwitch) {
+            if (chargerUtils.isHSPCEnabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
         } else {
             Tile.STATE_INACTIVE
         }
         qsTile.updateTile()
     }
+
 }
