@@ -1,0 +1,23 @@
+aidl_interface {
+    name: "vendor.semc.hardware.extlight",
+    vendor_available: true,
+    srcs: ["vendor/semc/hardware/extlight/*.aidl"],
+    owner: "sony",
+    stability: "vintf",
+
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            enabled: true,
+            platform_apis: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+}

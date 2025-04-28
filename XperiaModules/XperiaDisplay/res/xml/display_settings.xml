@@ -32,6 +32,12 @@
 
         <SwitchPreferenceCompat
             app:iconSpaceReserved="false"
+            app:key="video_image_enhance"
+            app:summary="@string/video_enhance_summary"
+            app:title="@string/video_enhance_title"/>
+
+        <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
             app:key="motion_blur_reduction"
             app:summary="@string/motion_blur_reduction_summary"
             app:title="@string/motion_blur_reduction_title"/>

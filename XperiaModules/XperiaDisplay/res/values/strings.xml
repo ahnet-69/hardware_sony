@@ -27,6 +27,8 @@
     <string name="display_cm_summary">Provide a faithful reproduction of the creator\'s intended vision through high definition display and specially developed image processing compatible with BT.2020 color gamut and 10-bit color of HDR specification.</string>
     <string name="display_settings_footer">Apps that support a wide color gamut will automatically be shown in their original colors.\n\n\nHDR videos in fullscreen mode will be automatically displayed with Creator Mode.</string>
     <string name="white_balance_profile_title">White Balance</string>
+    <string name="video_enhance_title">Video image enhancement</string>
+    <string name="video_enhance_summary">Enhance the video quality</string>
     <string name="motion_blur_reduction_summary">Displays clear image of moving objects with reduced motion blur</string>
     <string name="motion_blur_reduction_title">Motion Blur Reduction</string>
 
