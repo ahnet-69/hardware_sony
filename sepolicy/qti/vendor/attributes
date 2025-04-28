@@ -1,4 +1,5 @@
 # HALs
+vendor_hal_attribute(light)
 vendor_hal_attribute(somc_charger)
 vendor_hal_attribute(disp)
 vendor_hal_attribute(idd)

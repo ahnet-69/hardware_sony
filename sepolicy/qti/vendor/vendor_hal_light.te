@@ -1,0 +1,5 @@
+# HwBinder IPC from client to server
+binder_call(vendor_hal_light_client, vendor_hal_light_server)
+
+add_service(vendor_hal_light_server, vendor_hal_light_service)
+allow vendor_hal_light_client vendor_hal_light_service:service_manager find;

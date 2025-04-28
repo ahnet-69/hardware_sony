@@ -1,0 +1,7 @@
+type vendor_hal_light_default, domain;
+hal_server_domain(vendor_hal_light_default, vendor_hal_light)
+
+type vendor_hal_light_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_hal_light_default)
+
+binder_call(vendor_hal_light_default, servicemanager);
