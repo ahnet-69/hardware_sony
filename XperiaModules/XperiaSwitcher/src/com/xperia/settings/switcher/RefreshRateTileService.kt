@@ -19,6 +19,10 @@ package com.xperia.settings.switcher
 
 import android.content.Context
 import android.content.pm.PackageManager
+import android.database.ContentObserver
+import android.hardware.display.DisplayManager
+import android.os.Handler
+import android.os.Looper
 import android.provider.Settings
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
@@ -29,27 +33,44 @@ import java.util.Locale
 import com.xperia.settings.switcher.R
 
 class RefreshRateTileService : TileService() {
-    private val KEY_MIN_REFRESH_RATE = "min_refresh_rate"
-    private val KEY_PEAK_REFRESH_RATE = "peak_refresh_rate"
 
     private lateinit var context: Context
-    private lateinit var tile: Tile
 
-    private val availableRates = ArrayList<Int>()
+    private lateinit var availableRates: List<Int>
     private var activeRateMin = 0
     private var activeRateMax = 0
+
+    private lateinit var displayManager: DisplayManager
+
+    private val settingsObserver = object : ContentObserver(Handler(Looper.getMainLooper())) {
+        override fun onChange(selfChange: Boolean) {
+            syncFromSettings()
+            updateTileView()
+        }
+    }
 
     override fun onCreate() {
         super.onCreate()
         context = applicationContext
-        val mode: Display.Mode = context.display.mode
-        val modes: Array<Display.Mode> = context.display.supportedModes
-        for (m in modes) {
-            val rate = m.refreshRate.toInt()
-            if (m.physicalWidth == mode.physicalWidth && m.physicalHeight == mode.physicalHeight) {
-                availableRates.add(rate)
+
+        displayManager = context.getSystemService(DisplayManager::class.java)
+            ?: throw Exception("Display manager is NULL")
+
+        val display = displayManager.getDisplay(Display.DEFAULT_DISPLAY)
+            ?: throw Exception("Can not find default display")
+
+        val supportedModes = display.supportedModes
+        val currentMode = display.mode
+
+        availableRates = supportedModes
+            .filter { mode ->
+                mode.physicalWidth == currentMode.physicalWidth &&
+                mode.physicalHeight == currentMode.physicalHeight
             }
-        }
+            .map { mode -> mode.refreshRate.toInt() }
+            .distinct()
+            .sorted()
+
         syncFromSettings()
     }
 
@@ -61,19 +82,20 @@ class RefreshRateTileService : TileService() {
     }
 
     private fun syncFromSettings() {
-        activeRateMin = getSettingOf(KEY_MIN_REFRESH_RATE)
-        activeRateMax = getSettingOf(KEY_PEAK_REFRESH_RATE)
+        activeRateMin = getSettingOf(Settings.System.MIN_REFRESH_RATE)
+        activeRateMax = getSettingOf(Settings.System.PEAK_REFRESH_RATE)
     }
 
     private fun cycleRefreshRate() {
         activeRateMin = (activeRateMin + 1) % availableRates.size
 
         val rate = availableRates[activeRateMin]
-        Settings.System.putInt(context.contentResolver, KEY_MIN_REFRESH_RATE, rate)
-        Settings.System.putInt(context.contentResolver, KEY_PEAK_REFRESH_RATE, rate)
+        Settings.System.putInt(context.contentResolver, Settings.System.MIN_REFRESH_RATE, rate)
+        Settings.System.putInt(context.contentResolver, Settings.System.PEAK_REFRESH_RATE, rate)
     }
 
     private fun updateTileView() {
+        val tile = qsTile
         val displayText: String
         val min = availableRates[activeRateMin]
         val max = availableRates[activeRateMax]
@@ -87,13 +109,28 @@ class RefreshRateTileService : TileService() {
 
     override fun onStartListening() {
         super.onStartListening()
-        tile = qsTile
+        context.contentResolver.registerContentObserver(
+            Settings.System.getUriFor(Settings.System.MIN_REFRESH_RATE),
+            false,
+            settingsObserver
+        )
+        context.contentResolver.registerContentObserver(
+            Settings.System.getUriFor(Settings.System.PEAK_REFRESH_RATE),
+            false,
+            settingsObserver
+        )
         syncFromSettings()
         updateTileView()
         checkRefreshRateAvailable()
     }
 
+    override fun onStopListening() {
+        super.onStopListening()
+        context.contentResolver.unregisterContentObserver(settingsObserver)
+    }
+
     private fun checkRefreshRateAvailable() {
+        val tile = qsTile
         val hasDefaultRefreshRate = resources.getInteger(R.integer.config_defaultRefreshRate)
         val hasDefaultPeakRefreshRate = resources.getInteger(R.integer.config_defaultPeakRefreshRate)
 
@@ -107,10 +144,9 @@ class RefreshRateTileService : TileService() {
 
     override fun onClick() {
         super.onClick()
+        val tile = qsTile
         if (tile.state != Tile.STATE_UNAVAILABLE) {
             cycleRefreshRate()
-            syncFromSettings()
-            updateTileView()
         }
     }
 }

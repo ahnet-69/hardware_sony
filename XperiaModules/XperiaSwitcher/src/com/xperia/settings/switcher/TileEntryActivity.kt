@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.xperia.settings.switcher
 
 import android.app.Activity
@@ -36,7 +35,7 @@ public class TileEntryActivity: Activity() {
                 val intent: Intent = Intent()
                 intent.setComponent(
                     ComponentName("com.android.settings",
-                        "com.android.settings.RefreshRateSettingsActivity"));
+                        "com.android.settings.Settings.DisplaySettingsActivity"));
                 openActivitySafely(intent);
             }
             else -> {
