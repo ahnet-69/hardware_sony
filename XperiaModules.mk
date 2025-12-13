@@ -47,10 +47,10 @@ endif
 
 # High Touch Polling Service
 ifeq ($(TARGET_SUPPORTS_HIGH_POLLING_RATE),true)
-include hardware/sony/XperiaModules/XperiaTouch/sepolicy/SEPolicy.mk
-	PRODUCT_PACKAGES += \
-	XperiaTouch \
-	XperiaTouchOverlay
+#include hardware/sony/XperiaModules/XperiaTouch/sepolicy/SEPolicy.mk
+#	PRODUCT_PACKAGES += \
+#	XperiaTouch \
+#	XperiaTouchOverlay
 endif
 
 # Audio Settings
