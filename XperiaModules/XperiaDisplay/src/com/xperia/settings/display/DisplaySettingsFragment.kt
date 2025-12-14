@@ -32,7 +32,9 @@ import com.xperia.settings.display.SemcDisplayUtils.Companion.CREATOR_MODE_ENABL
 import com.xperia.settings.display.SemcDisplayUtils.Companion.MOTION_BLUR_REDUCTION_ENABLE
 import com.xperia.settings.display.SemcDisplayUtils.Companion.WHITE_BALANCE_PROF
 
-class DisplaySettingsFragment : PreferenceFragmentCompat(), Preference.OnPreferenceChangeListener {
+import com.android.settingslib.widget.SettingsBasePreferenceFragment
+
+class DisplaySettingsFragment : SettingsBasePreferenceFragment(), Preference.OnPreferenceChangeListener {
 
     companion object {
         private const val DOT_INDICATOR_SIZE = 12

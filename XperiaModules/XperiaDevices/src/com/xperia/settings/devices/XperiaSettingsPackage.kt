@@ -11,10 +11,12 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.preference.*
 import androidx.core.content.pm.PackageInfoCompat
- 
+
 import com.xperia.settings.devices.R
- 
-class XperiaSettingsPackage(private val fragment: PreferenceFragmentCompat) {
+
+import com.android.settingslib.widget.SettingsBasePreferenceFragment
+
+class XperiaSettingsPackage(private val fragment: SettingsBasePreferenceFragment) {
     private val pm = fragment.activity?.packageManager
     private val extmonPackageName = "com.sonymobile.extmonitorapp"
     private val extmonClassName = "com.sonymobile.extmonitorapp.settings.SettingsAppLauncherActivity"

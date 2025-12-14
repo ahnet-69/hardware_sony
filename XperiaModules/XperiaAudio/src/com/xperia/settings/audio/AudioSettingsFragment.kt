@@ -12,11 +12,12 @@ import android.os.Bundle
 import android.os.Handler
 import android.provider.Settings
 import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreferenceCompat
 import com.xperia.settings.audio.R
 
-class AudioSettingsFragment : PreferenceFragmentCompat(), Preference.OnPreferenceChangeListener {
+import com.android.settingslib.widget.SettingsBasePreferenceFragment
+
+class AudioSettingsFragment : SettingsBasePreferenceFragment(), Preference.OnPreferenceChangeListener {
 
     private var dseePref: SwitchPreferenceCompat? = null
     private var windNrPref: SwitchPreferenceCompat? = null

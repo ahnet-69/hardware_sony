@@ -13,7 +13,9 @@ import android.content.pm.PackageManager
 import com.xperia.settings.devices.R
 import com.xperia.settings.devices.XperiaSettingsPackage
 
-class XperiaSettingsFragment : PreferenceFragmentCompat() {
+import com.android.settingslib.widget.SettingsBasePreferenceFragment
+
+class XperiaSettingsFragment : SettingsBasePreferenceFragment() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.xperia_settings, rootKey)
 

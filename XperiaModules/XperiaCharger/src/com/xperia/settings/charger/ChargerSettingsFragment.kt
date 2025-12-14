@@ -18,7 +18,6 @@ import android.provider.Settings
 import android.util.Log
 import android.content.SharedPreferences
 import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import androidx.preference.SwitchPreferenceCompat
 import com.android.settingslib.widget.MainSwitchPreference
@@ -29,13 +28,15 @@ import com.xperia.settings.charger.ChargerUtils.Companion.CHARGER_MAIN_ENABLE
 import com.xperia.settings.charger.ChargerUtils.Companion.CHARGER_LIMIT_ENABLE
 import com.xperia.settings.charger.ChargerUtils.Companion.CHARGER_HS_ENABLE
 
+import com.android.settingslib.widget.SettingsBasePreferenceFragment
+
 const val CHARGER_SETTING_ENABLE_KEY = "device_charging_main_enable"
 const val CHARGER_CHARGING_ENABLE_KEY = "device_charging_enable"
 const val CHARGER_CHARGING_ENABLE_BACKUP = "device_charging_enable_backup"
 const val CHARGER_CHARGING_LIMIT_KEY = "device_charging_control"
 const val CHARGER_CHARGING_LIMIT_BACKUP = "device_charging_control_backup"
 
-class ChargerSettingsFragment : PreferenceFragmentCompat(),
+class ChargerSettingsFragment : SettingsBasePreferenceFragment(),
     Preference.OnPreferenceChangeListener {
 
     private lateinit var chargerUtils: ChargerUtils

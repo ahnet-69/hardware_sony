@@ -13,7 +13,6 @@ import android.provider.Settings
 import android.widget.CompoundButton
 import androidx.preference.ListPreference
 import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import com.android.settingslib.widget.MainSwitchPreference
 import com.xperia.settings.haptics.R
@@ -22,7 +21,9 @@ import com.xperia.settings.haptics.MediaVibration.getMediaVibrationState
 import com.xperia.settings.haptics.MediaVibration.setMediaVibrationLevel
 import com.xperia.settings.haptics.MediaVibration.switchMediaVibration
 
-class MediaVibrationSettingsFragment : PreferenceFragmentCompat(),
+import com.android.settingslib.widget.SettingsBasePreferenceFragment
+
+class MediaVibrationSettingsFragment : SettingsBasePreferenceFragment(),
     Preference.OnPreferenceChangeListener,
     CompoundButton.OnCheckedChangeListener {
     private lateinit var mSwitchBar: MainSwitchPreference
