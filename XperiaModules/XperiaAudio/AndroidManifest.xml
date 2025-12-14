@@ -25,7 +25,8 @@
         android:persistent="true"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true"
-        android:enableOnBackInvokedCallback="true">
+        android:enableOnBackInvokedCallback="true"
+        android:theme="@style/Theme.SubSettingsBase.Expressive">
 
         <receiver
             android:name=".BootCompletedReceiver"
@@ -40,7 +41,6 @@
         <activity
                 android:name=".AudioSettingsActivity"
                 android:exported="false"
-                android:theme="@style/Theme.SubSettingsBase"
                 android:label="@string/audio_menu_header">
             <intent-filter>
                 <action android:name="android.media.action.DISPLAY_AUDIO_EFFECT_CONTROL_PANEL"/>

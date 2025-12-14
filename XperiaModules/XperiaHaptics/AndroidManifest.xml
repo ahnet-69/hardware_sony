@@ -21,7 +21,8 @@
         android:persistent="true"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true"
-        android:enableOnBackInvokedCallback="true">
+        android:enableOnBackInvokedCallback="true"
+        android:theme="@style/Theme.SubSettingsBase.Expressive">
 
         <receiver android:name=".BootCompletedReceiver"
                   android:exported="false">
@@ -34,8 +35,7 @@
         <activity
             android:name=".MediaVibrationActivity"
             android:exported="true"
-            android:label="@string/mediavib_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:label="@string/mediavib_title">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />

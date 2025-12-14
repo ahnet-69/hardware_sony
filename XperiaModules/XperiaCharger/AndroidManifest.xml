@@ -21,7 +21,8 @@
         android:label="@string/app_name"
         android:persistent="true"
         android:directBootAware="true"
-        android:enableOnBackInvokedCallback="true">
+        android:enableOnBackInvokedCallback="true"
+        android:theme="@style/Theme.SubSettingsBase.Expressive">
 
         <receiver android:name=".BootCompletedReceiver"
                   android:exported="true">
@@ -54,7 +55,6 @@
         <activity
                 android:name=".ChargerSettingsActivity"
                 android:exported="false"
-                android:theme="@style/Theme.SubSettingsBase"
                 android:label="@string/charger_settings_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS"/>
