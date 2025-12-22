@@ -18,53 +18,65 @@
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)/XperiaModules
 
-# Devices
-ifeq ($(TARGET_SHIPS_SONY_APPS),true)
-        PRODUCT_PACKAGES += XperiaDevices
+# Audio Settings
+ifeq ($(TARGET_SHIPS_SOUND_ENHANCEMENT),true)
+PRODUCT_PACKAGES += \
+	XperiaAudio
 endif
 
 # Battery Care
-ifeq ($(TARGET_SUPPORTS_BATTERY_CARE),true)
+ifeq ($(TARGET_SUPPORTS_BATT_CARE),true)
 include hardware/sony/XperiaModules/XperiaCharger/sepolicy/SEPolicy.mk
-	PRODUCT_PACKAGES += XperiaCharger
+
+PRODUCT_PACKAGES += \
+	XperiaCharger
+endif
+
+# Devices
+ifeq ($(TARGET_SHIPS_SONY_APPS),true)
+PRODUCT_PACKAGES += \
+	XperiaDevices
 endif
 
 # Display Settings
 ifeq ($(TARGET_SUPPORTS_CREATOR_MODE),true)
 include hardware/sony/XperiaModules/XperiaDisplay/sepolicy/SEPolicy.mk
-	PRODUCT_PACKAGES += XperiaDisplay
+
+PRODUCT_PACKAGES += \
+	XperiaDisplay
 endif
 
-# Media Vibration
-ifeq ($(TARGET_SUPPORTS_MEDIA_VIBRATION),true)
-        PRODUCT_PACKAGES += XperiaHaptics
-endif
-
-# Refresh Rate
-ifeq ($(TARGET_SUPPORTS_HIGH_REFRESH_RATE),true)
-	PRODUCT_PACKAGES += XperiaSwitcher
+# E-Sim
+ifeq ($(TARGET_SUPPORTS_EUICC),true)
+PRODUCT_PACKAGES += \
+	XperiaEuicc
 endif
 
 # High Touch Polling Service
 ifeq ($(TARGET_SUPPORTS_HIGH_POLLING_RATE),true)
 include hardware/sony/XperiaModules/XperiaTouch/sepolicy/SEPolicy.mk
-	PRODUCT_PACKAGES += \
+
+PRODUCT_PACKAGES += \
 	XperiaTouch \
 	XperiaTouchOverlay
 endif
 
-# Audio Settings
-ifeq ($(TARGET_SHIPS_SOUND_ENHANCEMENT),true)
-       PRODUCT_PACKAGES += XperiaAudio
+# Media Vibration
+ifeq ($(TARGET_SUPPORTS_MEDIA_VIBRATION),true)
+PRODUCT_PACKAGES += \
+	XperiaHaptics
 endif
 
-# E-Sim
-ifeq ($(TARGET_SUPPORTS_EUICC),true)
-	PRODUCT_PACKAGES += XperiaEuicc
+# Refresh Rate
+ifeq ($(TARGET_SUPPORTS_HIGH_REFRESH_RATE),true)
+PRODUCT_PACKAGES += \
+	XperiaSwitcher
 endif
 
 # Apps Disabler
 ifeq ($(TARGET_SHIPS_XPERIA_DISABLER),true)
 include hardware/sony/XperiaModules/XperiaDisabler/sepolicy/SEPolicy.mk
-        PRODUCT_PACKAGES += XperiaDisabler
+
+PRODUCT_PACKAGES += \
+	XperiaDisabler
 endif
